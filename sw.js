@@ -1,9 +1,9 @@
-var CACHE_NAME = 'cache-v1';
+var CACHE_NAME = 'cache-v2';
 var urlsToCache = [
   '/audio-player/',
   '/audio-player/main.css',
   '/audio-player/main.js',
-  '/audio-player/when.mp3',
+  '/audio-player/audio.mp3',
 ];
 
 self.addEventListener('install', function(event) {
@@ -12,7 +12,6 @@ self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(function(cache) {
-        console.log('Service worker -> Opened cache');
         return cache.addAll(urlsToCache);
       })
   );
@@ -22,7 +21,6 @@ self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request)
       .then(function(response) {
-        console.log('Service worker -> Cache hit');
         // Cache hit - return response
         if (response) {
             return response;
@@ -41,8 +39,6 @@ self.addEventListener('fetch', function(event) {
               .then(function(cache) {
               cache.put(event.request, responseToCache);
               });
-
-          console.log('Service worker -> Cache storing value');
 
           return response;
           }
