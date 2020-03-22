@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+	<title>Main</title>
+	
+	<link rel="manifest" href="/audio-player/manifest.json">
+
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="Timer elm application">
+	<meta name="apple-mobile-web-app-title" content="Timer elm application">
+	<meta name="theme-color" content="#333333">
+	<meta name="msapplication-navbutton-color" content="#333333">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="msapplication-starturl" content="/">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link rel="icon" type="image/png" sizes="512x512" href="play512.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="512x512" href="play512.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="play192.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="192x192" href="play192.png">
+
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet"> 
+	<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=4.0, minimum-scale=0.86">
+</head>
+
+<body>
+
+<pre id="elm"></pre>
+<script src="main.js"></script>
+<script>
+	(() => {
+		var app = Elm.Main.init({
+  		node: document.getElementById('elm')
+	});
+
+	var audio = new Audio('audio.mp3');
+	app.ports.playNotification.subscribe(function(data) {
+		if (data) { 
+			audio.play();
+		} else {
+			audio.pause();
+		}
+	});
+
+
+
+	if ('serviceWorker' in navigator) {
+		window.addEventListener('load', function() {
+			navigator.serviceWorker.register('/audio-player/sw.js', {scope: '/audio-player/'}).then(function(registration) {
+			// Registration was successful
+			console.log('ServiceWorker registration successful with scope: ', registration.scope);
+			}, function(err) {
+			// registration failed :(
+			console.log('ServiceWorker registration failed: ', err);
+			});
+		});
+	}
+	})();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "Audio player",
+  "short_name": "Elm audio player",
+  "description": "Testing elm and pwa",
+  "lang": "en",
+  "start_url": "/audio-player/",
+  "display": "standalone",
+  "theme_color": "#333333",
+  "icons": [
+    {
+      "src": "play512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "play192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
