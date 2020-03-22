@@ -1,4 +1,4 @@
-var CACHE_NAME = 'cache-v2';
+var CACHE_NAME = 'cache-v3';
 var urlsToCache = [
   '/audio-player/',
   '/audio-player/main.css',
@@ -7,7 +7,6 @@ var urlsToCache = [
 ];
 
 self.addEventListener('install', function(event) {
-    console.log('Service worker -> Install');
   // Perform install steps
   event.waitUntil(
     caches.open(CACHE_NAME)
