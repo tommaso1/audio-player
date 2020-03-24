@@ -1,14 +1,16 @@
-module Model exposing (..)
+module Model exposing (PageState(..), AudioPageModel, PlayerState(..))
 
-type PageState = SplashPage Int
+
+-- MODEL
+type PageState =  SplashPage Int
                 | Intro
                 | Step1
                 | Step2
                 | Terms
-                | AudioPage PlayerModel
+                | AudioPage AudioPageModel
 
 
-type alias PlayerModel =
+type alias AudioPageModel =
   { seconds: Int,
     playerState: PlayerState
   }

@@ -3,6 +3,9 @@ port module Main exposing (..)
 import Html exposing (..)
 import Browser
 import Time
+import AudioPage exposing (..)
+import Model exposing (PageState(..), AudioPageModel, PlayerState(..))
+import Msg exposing (Msg(..))
 import Html.Attributes exposing (..)
 import Html.Events exposing (onInput, onClick)
 
@@ -21,84 +24,78 @@ main =
 
 
 
--- MODEL
+-- INIT
 
-
-type alias Model =
-  { seconds: Int,
-    playerState: PlayerState
-  }
-
-init : () -> (Model, Cmd Msg)
+init : () -> (PageState, Cmd Msg)
 init _ =
-  ( { seconds = 0, playerState = Idle }
+  ( SplashPage 0
   , Cmd.none
   )
 
 
 
--- UPDATE
-
-
-type Msg
-  = Tick Time.Posix
-  | PlayAudio
-  | PauseAudio
-
-type PlayerState = Idle | Play | Stop
-
-
-update : Msg -> Model -> (Model, Cmd Msg)
-update msg model = case (msg, model.playerState) of
-          (Tick _, Play) -> ( { model | seconds = model.seconds + 1 }, Cmd.none)
-          (Tick _, _) -> ( model , Cmd.none)
-          (PlayAudio, _) -> ({ model | playerState = Play }, playNotification True)
-          (PauseAudio, _) -> ({ model | playerState = Stop }, playNotification False)
+update : Msg -> PageState -> (PageState, Cmd Msg)
+update msg model = case model of
+    AudioPage m -> case (msg, m.playerState) of
+          (Tick _, Play) -> (AudioPage { m | seconds = m.seconds + 1 }, Cmd.none)
+          (Tick _, _) -> (model , Cmd.none)
+          (PlayAudio, _) -> (AudioPage { m | playerState = Play }, playNotification True)
+          (PauseAudio, _) -> (AudioPage { m | playerState = Stop }, playNotification False)
+          (_, _) -> (model, Cmd.none)
+    SplashPage 2 -> (Intro, Cmd.none)
+    SplashPage p -> case msg of 
+      Tick _ -> (SplashPage (1 + p), Cmd.none)
+      _ -> (model, Cmd.none)
+    _ -> case msg of
+      ToIntro -> (Intro, Cmd.none)
+      ToStep1 -> (Step1, Cmd.none)
+      ToStep2 -> (Step2, Cmd.none)
+      ToTerms -> (Terms, Cmd.none)
+      ToAudioPage  -> (AudioPage { seconds = 0, playerState = Idle}, Cmd.none)
+      _ -> (model, Cmd.none)
 
 
 -- SUBSCRIPTIONS
 
-
-subscriptions : Model -> Sub Msg
+subscriptions : PageState -> Sub Msg
 subscriptions model =
   Time.every 1000 Tick
-
 
 
 -- VIEW
 
 
-view : Model -> Html Msg
-view model =
-  let
-    second = formatSeconds(modBy 60 model.seconds)
-    minutes = formatSeconds(model.seconds // 60)
-  in
-  div [ class "container" ] [
-      div [ class "circle-container" ] [
-        div [ class (classFromModel model) ] [
-          h1 [] [ text (minutes ++ ":" ++ second) ]
-        ]
+
+view : PageState -> Html Msg
+view model = case model of 
+  AudioPage p -> viewAudioPage p
+  SplashPage _ -> viewSplash()
+  Intro -> viewIntro()
+  Step1 -> viewStep1()
+  Step2 -> viewStep2()
+  Terms -> viewTerms()
+
+
+
+viewSplash : () -> Html Msg
+viewSplash () =  button [ onClick ToIntro, class "input"] [
+        text "Splash page"
       ]
-      , button [ onClick
-       (case model.playerState of 
-        Idle -> PlayAudio
-        Play -> PauseAudio
-        Stop -> PlayAudio)
-      , id "input"] [
-        text (case model.playerState of 
-          Idle -> "Play"
-          Play -> "Pause"
-          Stop -> "Play"
-        )
-      ]
+
+viewIntro : () -> Html Msg
+viewIntro () =  div [] [ button [ onClick ToStep1, class "input"] [ text "Iniziamo" ]
+    , button [ onClick ToTerms, class "input"] [ text "Termini e condizioni" ]
   ]
 
-classFromModel : Model -> String
-classFromModel model = case model.playerState of
-       Idle -> "init"
-       Stop -> "stop"
-       Play -> "play"
-        
-formatSeconds : Int -> String
-formatSeconds i = if i > 9 then String.fromInt i else "0" ++ String.fromInt i
+viewTerms : () -> Html Msg
+viewTerms () =  div [] [ button [ onClick ToIntro, class "input"] [ text "Ok" ]
+  ]
+
+viewStep1 : () -> Html Msg
+viewStep1 model =  div [] [ button [ onClick ToStep2, class "input"] [ text "Tocca per continuare" ]  
+  ]
+
+
+viewStep2 : () -> Html Msg
+viewStep2 model =  div [] [ button [ onClick ToAudioPage, class "input"] [ text "Iniziamo" ]  
+  ]
