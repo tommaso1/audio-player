@@ -29,7 +29,6 @@ type alias Model =
     playerState: PlayerState
   }
 
-
 init : () -> (Model, Cmd Msg)
 init _ =
   ( { seconds = 0, playerState = Idle }
