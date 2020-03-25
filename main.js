@@ -5184,16 +5184,14 @@ var $elm$core$Task$perform = F2(
 			A2($elm$core$Task$map, toMessage, task));
 	});
 var $elm$browser$Browser$element = _Browser_element;
-var $author$project$Model$AudioPage = function (a) {
-	return {$: 6, a: a};
+var $author$project$Model$SplashPage = function (a) {
+	return {$: 0, a: a};
 };
-var $author$project$Model$Idle = 0;
 var $elm$core$Platform$Cmd$batch = _Platform_batch;
 var $elm$core$Platform$Cmd$none = $elm$core$Platform$Cmd$batch(_List_Nil);
 var $author$project$Main$init = function (_v0) {
 	return _Utils_Tuple2(
-		$author$project$Model$AudioPage(
-			{G: 0, af: 0}),
+		$author$project$Model$SplashPage(0),
 		$elm$core$Platform$Cmd$none);
 };
 var $author$project$Msg$Tick = function (a) {
@@ -5615,11 +5613,12 @@ var $elm$time$Time$every = F2(
 var $author$project$Main$subscriptions = function (model) {
 	return A2($elm$time$Time$every, 1000, $author$project$Msg$Tick);
 };
+var $author$project$Model$AudioPage = function (a) {
+	return {$: 6, a: a};
+};
+var $author$project$Model$Idle = 0;
 var $author$project$Model$Intro = {$: 1};
 var $author$project$Model$Play = 1;
-var $author$project$Model$SplashPage = function (a) {
-	return {$: 0, a: a};
-};
 var $author$project$Model$Step1 = {$: 2};
 var $author$project$Model$Step2 = {$: 3};
 var $author$project$Model$Step3 = {$: 4};

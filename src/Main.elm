@@ -33,7 +33,7 @@ main =
 
 init : () -> (PageState, Cmd Msg)
 init _ =
-  ( AudioPage { seconds = 0, playerState = Idle}
+  ( SplashPage 0
   , Cmd.none
   )
 
