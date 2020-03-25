@@ -5841,7 +5841,7 @@ var $author$project$Intro$viewIntro = function (_v0) {
 		$elm$html$Html$div,
 		_List_fromArray(
 			[
-				$elm$html$Html$Attributes$class('column')
+				$elm$html$Html$Attributes$class('column-space-between')
 			]),
 		_List_fromArray(
 			[
@@ -5849,75 +5849,84 @@ var $author$project$Intro$viewIntro = function (_v0) {
 				$elm$html$Html$div,
 				_List_fromArray(
 					[
-						$elm$html$Html$Attributes$class('app_bar')
+						$elm$html$Html$Attributes$class('column')
 					]),
 				_List_fromArray(
 					[
 						A2(
-						$elm$html$Html$h1,
-						_List_Nil,
+						$elm$html$Html$div,
 						_List_fromArray(
 							[
-								$elm$html$Html$text('Benvenuto su Mindfulness')
+								$elm$html$Html$Attributes$class('app_bar')
+							]),
+						_List_fromArray(
+							[
+								A2(
+								$elm$html$Html$h1,
+								_List_Nil,
+								_List_fromArray(
+									[
+										$elm$html$Html$text('Benvenuto su Mindfulness')
+									]))
+							])),
+						A2(
+						$elm$html$Html$p,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('description')
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Sei uno dei nostri eroi. Grazie per quello che fai. Prenditi una pausa e dedica un po\' di tempo a te stesso. Ti consigliamo di utilizzare Mindfulness una volta concluso il tuo turno di lavoro o a casa per rigenerarti.')
+							])),
+						A2(
+						$elm$html$Html$p,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('description')
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('La mindfulness è un metodo validato che permette di passare da uno stato di sofferenza a una percezione soggettiva di benessere, grazie alla conoscenza profonda degli stati mentali.')
 							]))
 					])),
 				A2(
-				$elm$html$Html$p,
+				$elm$html$Html$img,
 				_List_fromArray(
 					[
-						$elm$html$Html$Attributes$class('description')
+						$elm$html$Html$Attributes$src('Illustration_welcome.svg')
 					]),
-				_List_fromArray(
-					[
-						$elm$html$Html$text('Sei uno dei nostri eroi. Grazie per quello che fai. Prenditi una pausa e dedica un po\' di tempo a te stesso. Ti consigliamo di utilizzare Mindfulness una volta concluso il tuo turno di lavoro o a casa per rigenerarti.')
-					])),
-				A2(
-				$elm$html$Html$p,
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$class('description')
-					]),
-				_List_fromArray(
-					[
-						$elm$html$Html$text('La mindfulness è un metodo validato che permette di passare da uno stato di sofferenza a una percezione soggettiva di benessere, grazie alla conoscenza profonda degli stati mentali.')
-					])),
+				_List_Nil),
 				A2(
 				$elm$html$Html$div,
 				_List_fromArray(
 					[
-						$elm$html$Html$Attributes$class('image')
+						$elm$html$Html$Attributes$class('column')
 					]),
 				_List_fromArray(
 					[
 						A2(
-						$elm$html$Html$img,
+						$elm$html$Html$button,
 						_List_fromArray(
 							[
-								$elm$html$Html$Attributes$src('Illustration_welcome.svg')
+								$elm$html$Html$Events$onClick($author$project$Msg$ToStep1),
+								$elm$html$Html$Attributes$class('input_primary')
 							]),
-						_List_Nil)
-					])),
-				A2(
-				$elm$html$Html$button,
-				_List_fromArray(
-					[
-						$elm$html$Html$Events$onClick($author$project$Msg$ToStep1),
-						$elm$html$Html$Attributes$class('input_primary')
-					]),
-				_List_fromArray(
-					[
-						$elm$html$Html$text('Iniziamo')
-					])),
-				A2(
-				$elm$html$Html$button,
-				_List_fromArray(
-					[
-						$elm$html$Html$Events$onClick($author$project$Msg$ToTerms),
-						$elm$html$Html$Attributes$class('input_flat')
-					]),
-				_List_fromArray(
-					[
-						$elm$html$Html$text('Leggi le avvertenze')
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Iniziamo')
+							])),
+						A2(
+						$elm$html$Html$button,
+						_List_fromArray(
+							[
+								$elm$html$Html$Events$onClick($author$project$Msg$ToTerms),
+								$elm$html$Html$Attributes$class('input_flat')
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Leggi le avvertenze')
+							]))
 					]))
 			]));
 };
@@ -5936,18 +5945,44 @@ var $author$project$Main$viewSplash = function (_v0) {
 			]));
 };
 var $author$project$Msg$ToStep2 = {$: 'ToStep2'};
-var $author$project$Main$viewStep1 = function (model) {
+var $elm$html$Html$br = _VirtualDom_node('br');
+var $elm$html$Html$h2 = _VirtualDom_node('h2');
+var $author$project$Step1$viewStep1 = function (model) {
 	return A2(
 		$elm$html$Html$div,
-		_List_Nil,
 		_List_fromArray(
 			[
+				$elm$html$Html$Attributes$class('column-space-between')
+			]),
+		_List_fromArray(
+			[
+				A2(
+				$elm$html$Html$h2,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('tutorial_item margin-top-2')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Dai a te stesso il'),
+						A2($elm$html$Html$br, _List_Nil, _List_Nil),
+						$elm$html$Html$text('permesso di dedicarti'),
+						A2($elm$html$Html$br, _List_Nil, _List_Nil),
+						$elm$html$Html$text('20 minuti di tempo.')
+					])),
+				A2(
+				$elm$html$Html$img,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$src('Illustration_time.svg')
+					]),
+				_List_Nil),
 				A2(
 				$elm$html$Html$button,
 				_List_fromArray(
 					[
 						$elm$html$Html$Events$onClick($author$project$Msg$ToStep2),
-						$elm$html$Html$Attributes$class('input')
+						$elm$html$Html$Attributes$class('input_flat margin-bottom-4')
 					]),
 				_List_fromArray(
 					[
@@ -5956,38 +5991,90 @@ var $author$project$Main$viewStep1 = function (model) {
 			]));
 };
 var $author$project$Msg$ToStep3 = {$: 'ToStep3'};
-var $author$project$Main$viewStep2 = function (model) {
+var $author$project$Step2$viewStep2 = function (model) {
 	return A2(
 		$elm$html$Html$div,
-		_List_Nil,
 		_List_fromArray(
 			[
+				$elm$html$Html$Attributes$class('column-space-between')
+			]),
+		_List_fromArray(
+			[
+				A2(
+				$elm$html$Html$h2,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('tutorial_item margin-top-2')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Trova un luogo '),
+						A2($elm$html$Html$br, _List_Nil, _List_Nil),
+						$elm$html$Html$text('tranquillo.'),
+						A2($elm$html$Html$br, _List_Nil, _List_Nil),
+						$elm$html$Html$text('Se possibile, indossa'),
+						A2($elm$html$Html$br, _List_Nil, _List_Nil),
+						$elm$html$Html$text('delle cuffie auricolari.')
+					])),
+				A2(
+				$elm$html$Html$img,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$src('Illustration_sound.svg')
+					]),
+				_List_Nil),
 				A2(
 				$elm$html$Html$button,
 				_List_fromArray(
 					[
 						$elm$html$Html$Events$onClick($author$project$Msg$ToStep3),
-						$elm$html$Html$Attributes$class('input')
+						$elm$html$Html$Attributes$class('input_flat margin-bottom-4')
 					]),
 				_List_fromArray(
 					[
-						$elm$html$Html$text('Iniziamo')
+						$elm$html$Html$text('Tocca per continuare')
 					]))
 			]));
 };
 var $author$project$Msg$ToAudioPage = {$: 'ToAudioPage'};
-var $author$project$Main$viewStep3 = function (model) {
+var $author$project$Step3$viewStep3 = function (model) {
 	return A2(
 		$elm$html$Html$div,
-		_List_Nil,
 		_List_fromArray(
 			[
+				$elm$html$Html$Attributes$class('column-space-between')
+			]),
+		_List_fromArray(
+			[
+				A2(
+				$elm$html$Html$h2,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('tutorial_item margin-top-2')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Mettiti comodo, trova'),
+						A2($elm$html$Html$br, _List_Nil, _List_Nil),
+						$elm$html$Html$text('una posizione'),
+						A2($elm$html$Html$br, _List_Nil, _List_Nil),
+						$elm$html$Html$text('confortevole seduto'),
+						A2($elm$html$Html$br, _List_Nil, _List_Nil),
+						$elm$html$Html$text('o steso')
+					])),
+				A2(
+				$elm$html$Html$img,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$src('Illustration_posture.svg')
+					]),
+				_List_Nil),
 				A2(
 				$elm$html$Html$button,
 				_List_fromArray(
 					[
 						$elm$html$Html$Events$onClick($author$project$Msg$ToAudioPage),
-						$elm$html$Html$Attributes$class('input')
+						$elm$html$Html$Attributes$class('input_flat margin-bottom-4')
 					]),
 				_List_fromArray(
 					[
@@ -5995,7 +6082,6 @@ var $author$project$Main$viewStep3 = function (model) {
 					]))
 			]));
 };
-var $elm$html$Html$h2 = _VirtualDom_node('h2');
 var $author$project$Terms$viewTerms = function (_v0) {
 	return A2(
 		$elm$html$Html$div,
@@ -6058,11 +6144,11 @@ var $author$project$Main$view = function (model) {
 		case 'Intro':
 			return $author$project$Intro$viewIntro(_Utils_Tuple0);
 		case 'Step1':
-			return $author$project$Main$viewStep1(_Utils_Tuple0);
+			return $author$project$Step1$viewStep1(_Utils_Tuple0);
 		case 'Step2':
-			return $author$project$Main$viewStep2(_Utils_Tuple0);
+			return $author$project$Step2$viewStep2(_Utils_Tuple0);
 		case 'Step3':
-			return $author$project$Main$viewStep3(_Utils_Tuple0);
+			return $author$project$Step3$viewStep3(_Utils_Tuple0);
 		default:
 			return $author$project$Terms$viewTerms(_Utils_Tuple0);
 	}

@@ -10,6 +10,9 @@ import Html.Attributes exposing (..)
 import Html.Events exposing (onInput, onClick)
 import Intro exposing (..)
 import Terms exposing (..)
+import Step1 exposing (..)
+import Step2 exposing (..)
+import Step3 exposing (..)
 
 port playNotification : Bool -> Cmd msg
 
@@ -86,19 +89,3 @@ viewSplash () =  button [ onClick ToIntro, class "input"] [
         text "Splash page"
       ]
 
-
-
-viewStep1 : () -> Html Msg
-viewStep1 model =  div [] [ button [ onClick ToStep2, class "input"] [ text "Tocca per continuare" ]  
-  ]
-
-
-viewStep2 : () -> Html Msg
-viewStep2 model =  div [] [ button [ onClick ToStep3, class "input"] [ text "Iniziamo" ]  
-  ]
-
-
-
-viewStep3 : () -> Html Msg
-viewStep3 model =  div [] [ button [ onClick ToAudioPage, class "input"] [ text "Iniziamo" ]  
-  ]

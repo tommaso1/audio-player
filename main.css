@@ -7,6 +7,12 @@ html,body{
   }
 
   .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .column-space-between {
     width:100%;
     height:100%; 
     margin: 0 auto;
@@ -15,7 +21,7 @@ html,body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    justify-content: space-between;
   }
 
   .app_bar {
@@ -26,9 +32,16 @@ html,body{
     font-weight: bold;
   }
 
-  .margin-top {
-    margin-top: 5rem;
+
+  .tutorial_item {
+    font-weight: 400;
+    font-size: 1.7rem;
+    text-align: center;
+    line-height: 2.8rem;
+    padding: 3rem 0;
   }
+
+
 
   .description {
     padding: 0 1rem;
@@ -64,6 +77,19 @@ html,body{
     line-height: 19px;
     text-align: center;
     text-decoration-line: underline;
+  }
+
+
+  .margin-top {
+    margin-top: 4em
+  }
+
+  .margin-top-2 {
+    margin-top: 2em
+  }
+
+  .margin-bottom-4 {
+    margin-bottom: 4em
   }
 
   body {
