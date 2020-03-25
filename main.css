@@ -93,24 +93,16 @@ html,body{
   }
 
   body {
-    /* width:100%;
-    height:100%; */
     background-color:#EAFDFD;
-    
-    /* display:flex;
-    flex-direction: column;
-    justify-content:space-between;
-    align-items:center; */
   }
 
 
   .input {
     background: transparent;
-    margin: 8px;
     border: none;
-    color: #444;
     text-align: center;  
     font-family: 'Libre Baskerville', serif;
+    font-weight: bold;
     width: 150px;
     font-size: 18px;
   }
@@ -137,7 +129,7 @@ html,body{
   .play {
     width: 200px;
     height: 200px;
-    background-color: #ccc;
+    background-color: #A3C7E8;
     animation-name: pulse;
     border-radius: 250px;
     animation-duration: 2s;
@@ -145,18 +137,18 @@ html,body{
     display:flex;
     justify-content:center;
     align-items:center;
-    color: #333
+    color: #000
   }
 
   .init {
     width: 150px;
     height: 150px;
-    background-color: #ccc;
+    background-color: #A3C7E8;
     border-radius: 200px;
     display:flex;
     justify-content:center;
     align-items:center;
-    color: #333
+    color: #000
   }
 
   .done {
@@ -164,9 +156,6 @@ html,body{
     height: 150px;
     background-color: #aebfb0;
     border-radius: 200px;
-    animation-name: pulse-done;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -174,14 +163,9 @@ html,body{
   }
 
 
-  @keyframes pulse-done {
-    0% { background-color: #aebfb0; }
-    50% { background-color: #eee; }
-    100% { background-color: #aebfb0; }
-  }
   
   @keyframes pulse {
-    0% {background-color: #ccc; width: 150px; height: 150px; color: #333;}
-    50% {background-color: #eee; width: 200px; height: 200px; color: #444; }
-    100% {background-color: #ccc; width: 150px; height: 150px; color: #333; }
+    0% {background-color: #A3C7E8; width: 150px; height: 150px; color: #000;}
+    50% {background-color: #EAFDFD; width: 200px; height: 200px; color: #222; }
+    100% {background-color: #A3C7E8; width: 150px; height: 150px; color: #000; }
   }

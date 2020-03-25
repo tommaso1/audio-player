@@ -14,18 +14,25 @@ viewAudioPage model =
     second = formatSeconds(modBy 60 model.seconds)
     minutes = formatSeconds(model.seconds // 60)
   in
-  div [ class "container" ] [
+  div [ class "column-space-between" ] [
+    h2 [ class "margin-top margin-bottom-4" ] [ text "Mindfulness" ]
+    , div [ class "column" ] [
+      h3 [ ] [ text "Nome Sessione 1" ]
+      , p [ class "margin-top-2" ] [ text "Durata sessione: 20 minuti" ]
+    ]
+    , div [ class "container" ] [
       div [ class "circle-container" ] [
         div [ class (classFromModel model) ] [
           h1 [] [ text (minutes ++ ":" ++ second) ]
         ]
       ]
-      , button [ onClick
+    ]
+    , button [ onClick
        (case model.playerState of 
         Idle -> PlayAudio
         Play -> PauseAudio
         Stop -> PlayAudio)
-      , class "input"] [
+      , class "input margin-bottom-4"] [
         text (case model.playerState of 
           Idle -> "Play"
           Play -> "Pause"
@@ -33,6 +40,7 @@ viewAudioPage model =
         )
       ]
   ]
+  
 
 classFromModel : AudioPageModel -> String
 classFromModel model = case model.playerState of

@@ -1,7 +1,7 @@
 {
   "name": "Audio player",
-  "short_name": "Elm audio player",
-  "description": "Testing elm and pwa",
+  "short_name": "Mindfulness",
+  "description": "Relaxing mindfulness",
   "lang": "en",
   "start_url": "/audio-player/",
   "display": "standalone",

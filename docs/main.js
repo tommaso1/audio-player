@@ -784,11 +784,11 @@ function _Debug_crash_UNUSED(identifier, fact1, fact2, fact3, fact4)
 
 function _Debug_regionToString(region)
 {
-	if (region.K.B === region.P.B)
+	if (region.J.z === region.O.z)
 	{
-		return 'on line ' + region.K.B;
+		return 'on line ' + region.J.z;
 	}
-	return 'on lines ' + region.K.B + ' through ' + region.P.B;
+	return 'on lines ' + region.J.z + ' through ' + region.O.z;
 }
 
 
@@ -2705,8 +2705,8 @@ var _VirtualDom_mapEventRecord = F2(function(func, record)
 {
 	return {
 		o: func(record.o),
-		L: record.L,
-		I: record.I
+		K: record.K,
+		H: record.H
 	}
 });
 
@@ -2975,10 +2975,10 @@ function _VirtualDom_makeCallback(eventNode, initialHandler)
 
 		var value = result.a;
 		var message = !tag ? value : tag < 3 ? value.a : value.o;
-		var stopPropagation = tag == 1 ? value.b : tag == 3 && value.L;
+		var stopPropagation = tag == 1 ? value.b : tag == 3 && value.K;
 		var currentEventNode = (
 			stopPropagation && event.stopPropagation(),
-			(tag == 2 ? value.b : tag == 3 && value.I) && event.preventDefault(),
+			(tag == 2 ? value.b : tag == 3 && value.H) && event.preventDefault(),
 			eventNode
 		);
 		var tagger;
@@ -3968,7 +3968,7 @@ var _Browser_document = _Debugger_document || F4(function(impl, flagDecoder, deb
 		impl.aD,
 		impl.aB,
 		function(sendToApp, initialModel) {
-			var divertHrefToApp = impl.J && impl.J(sendToApp)
+			var divertHrefToApp = impl.I && impl.I(sendToApp)
 			var view = impl.aE;
 			var title = _VirtualDom_doc.title;
 			var bodyNode = _VirtualDom_doc.body;
@@ -4043,7 +4043,7 @@ function _Browser_application(impl)
 	var key = function() { key.a(onUrlChange(_Browser_getUrl())); };
 
 	return _Browser_document({
-		J: function(sendToApp)
+		I: function(sendToApp)
 		{
 			key.a = sendToApp;
 			_Browser_window.addEventListener('popstate', key);
@@ -4059,9 +4059,9 @@ function _Browser_application(impl)
 					var next = $elm$url$Url$fromString(href).a;
 					sendToApp(onUrlRequest(
 						(next
-							&& curr.ab === next.ab
-							&& curr.T === next.T
-							&& curr.Z.a === next.Z.a
+							&& curr.aa === next.aa
+							&& curr.S === next.S
+							&& curr.Y.a === next.Y.a
 						)
 							? $elm$browser$Browser$Internal(next)
 							: $elm$browser$Browser$External(href)
@@ -4232,12 +4232,12 @@ var _Browser_call = F2(function(functionName, id)
 function _Browser_getViewport()
 {
 	return {
-		af: _Browser_getScene(),
+		ae: _Browser_getScene(),
 		ai: {
 			ak: _Browser_window.pageXOffset,
 			al: _Browser_window.pageYOffset,
 			aj: _Browser_doc.documentElement.clientWidth,
-			S: _Browser_doc.documentElement.clientHeight
+			R: _Browser_doc.documentElement.clientHeight
 		}
 	};
 }
@@ -4248,7 +4248,7 @@ function _Browser_getScene()
 	var elem = _Browser_doc.documentElement;
 	return {
 		aj: Math.max(body.scrollWidth, body.offsetWidth, elem.scrollWidth, elem.offsetWidth, elem.clientWidth),
-		S: Math.max(body.scrollHeight, body.offsetHeight, elem.scrollHeight, elem.offsetHeight, elem.clientHeight)
+		R: Math.max(body.scrollHeight, body.offsetHeight, elem.scrollHeight, elem.offsetHeight, elem.clientHeight)
 	};
 }
 
@@ -4271,15 +4271,15 @@ function _Browser_getViewportOf(id)
 	return _Browser_withNode(id, function(node)
 	{
 		return {
-			af: {
+			ae: {
 				aj: node.scrollWidth,
-				S: node.scrollHeight
+				R: node.scrollHeight
 			},
 			ai: {
 				ak: node.scrollLeft,
 				al: node.scrollTop,
 				aj: node.clientWidth,
-				S: node.clientHeight
+				R: node.clientHeight
 			}
 		};
 	});
@@ -4309,18 +4309,18 @@ function _Browser_getElement(id)
 		var x = _Browser_window.pageXOffset;
 		var y = _Browser_window.pageYOffset;
 		return {
-			af: _Browser_getScene(),
+			ae: _Browser_getScene(),
 			ai: {
 				ak: x,
 				al: y,
 				aj: _Browser_doc.documentElement.clientWidth,
-				S: _Browser_doc.documentElement.clientHeight
+				R: _Browser_doc.documentElement.clientHeight
 			},
 			ar: {
 				ak: x + rect.left,
 				al: y + rect.top,
 				aj: rect.width,
-				S: rect.height
+				R: rect.height
 			}
 		};
 	});
@@ -4905,7 +4905,7 @@ var $elm$url$Url$Http = 0;
 var $elm$url$Url$Https = 1;
 var $elm$url$Url$Url = F6(
 	function (protocol, host, port_, path, query, fragment) {
-		return {R: fragment, T: host, X: path, Z: port_, ab: protocol, ac: query};
+		return {Q: fragment, S: host, W: path, Y: port_, aa: protocol, ab: query};
 	});
 var $elm$core$String$contains = _String_contains;
 var $elm$core$String$length = _String_length;
@@ -5184,15 +5184,19 @@ var $elm$core$Task$perform = F2(
 			A2($elm$core$Task$map, toMessage, task));
 	});
 var $elm$browser$Browser$element = _Browser_element;
-var $author$project$Main$Idle = 0;
+var $author$project$Model$AudioPage = function (a) {
+	return {$: 6, a: a};
+};
+var $author$project$Model$Idle = 0;
 var $elm$core$Platform$Cmd$batch = _Platform_batch;
 var $elm$core$Platform$Cmd$none = $elm$core$Platform$Cmd$batch(_List_Nil);
 var $author$project$Main$init = function (_v0) {
 	return _Utils_Tuple2(
-		{p: 0, x: 0},
+		$author$project$Model$AudioPage(
+			{G: 0, af: 0}),
 		$elm$core$Platform$Cmd$none);
 };
-var $author$project$Main$Tick = function (a) {
+var $author$project$Msg$Tick = function (a) {
 	return {$: 0, a: a};
 };
 var $elm$time$Time$Every = F2(
@@ -5201,7 +5205,7 @@ var $elm$time$Time$Every = F2(
 	});
 var $elm$time$Time$State = F2(
 	function (taggers, processes) {
-		return {aa: processes, ah: taggers};
+		return {_: processes, ah: taggers};
 	});
 var $elm$core$Dict$RBEmpty_elm_builtin = {$: -2};
 var $elm$core$Dict$empty = $elm$core$Dict$RBEmpty_elm_builtin;
@@ -5493,7 +5497,7 @@ var $elm$time$Time$spawnHelp = F3(
 	});
 var $elm$time$Time$onEffects = F3(
 	function (router, subs, _v0) {
-		var processes = _v0.aa;
+		var processes = _v0._;
 		var rightStep = F3(
 			function (_v6, id, _v7) {
 				var spawns = _v7.a;
@@ -5609,45 +5613,95 @@ var $elm$time$Time$every = F2(
 			A2($elm$time$Time$Every, interval, tagger));
 	});
 var $author$project$Main$subscriptions = function (model) {
-	return A2($elm$time$Time$every, 1000, $author$project$Main$Tick);
+	return A2($elm$time$Time$every, 1000, $author$project$Msg$Tick);
 };
-var $author$project$Main$Play = 1;
-var $author$project$Main$Stop = 2;
+var $author$project$Model$Intro = {$: 1};
+var $author$project$Model$Play = 1;
+var $author$project$Model$SplashPage = function (a) {
+	return {$: 0, a: a};
+};
+var $author$project$Model$Step1 = {$: 2};
+var $author$project$Model$Step2 = {$: 3};
+var $author$project$Model$Step3 = {$: 4};
+var $author$project$Model$Stop = 2;
+var $author$project$Model$Terms = {$: 5};
 var $elm$json$Json$Encode$bool = _Json_wrap;
 var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
 var $author$project$Main$update = F2(
 	function (msg, model) {
-		var _v0 = _Utils_Tuple2(msg, model.p);
-		switch (_v0.a.$) {
-			case 0:
-				if (_v0.b === 1) {
-					var _v1 = _v0.b;
-					return _Utils_Tuple2(
-						_Utils_update(
-							model,
-							{x: model.x + 1}),
-						$elm$core$Platform$Cmd$none);
-				} else {
-					return _Utils_Tuple2(model, $elm$core$Platform$Cmd$none);
+		switch (model.$) {
+			case 6:
+				var m = model.a;
+				var _v1 = _Utils_Tuple2(msg, m.G);
+				switch (_v1.a.$) {
+					case 0:
+						if (_v1.b === 1) {
+							var _v2 = _v1.b;
+							return _Utils_Tuple2(
+								$author$project$Model$AudioPage(
+									_Utils_update(
+										m,
+										{af: m.af + 1})),
+								$elm$core$Platform$Cmd$none);
+						} else {
+							return _Utils_Tuple2(model, $elm$core$Platform$Cmd$none);
+						}
+					case 1:
+						var _v3 = _v1.a;
+						return _Utils_Tuple2(
+							$author$project$Model$AudioPage(
+								_Utils_update(
+									m,
+									{G: 1})),
+							$author$project$Main$playNotification(true));
+					case 2:
+						var _v4 = _v1.a;
+						return _Utils_Tuple2(
+							$author$project$Model$AudioPage(
+								_Utils_update(
+									m,
+									{G: 2})),
+							$author$project$Main$playNotification(false));
+					default:
+						return _Utils_Tuple2(model, $elm$core$Platform$Cmd$none);
 				}
-			case 1:
-				var _v2 = _v0.a;
-				return _Utils_Tuple2(
-					_Utils_update(
-						model,
-						{p: 1}),
-					$author$project$Main$playNotification(true));
+			case 0:
+				if (model.a === 2) {
+					return _Utils_Tuple2($author$project$Model$Intro, $elm$core$Platform$Cmd$none);
+				} else {
+					var p = model.a;
+					if (!msg.$) {
+						return _Utils_Tuple2(
+							$author$project$Model$SplashPage(1 + p),
+							$elm$core$Platform$Cmd$none);
+					} else {
+						return _Utils_Tuple2(model, $elm$core$Platform$Cmd$none);
+					}
+				}
 			default:
-				var _v3 = _v0.a;
-				return _Utils_Tuple2(
-					_Utils_update(
-						model,
-						{p: 2}),
-					$author$project$Main$playNotification(false));
+				switch (msg.$) {
+					case 3:
+						return _Utils_Tuple2($author$project$Model$Intro, $elm$core$Platform$Cmd$none);
+					case 4:
+						return _Utils_Tuple2($author$project$Model$Step1, $elm$core$Platform$Cmd$none);
+					case 5:
+						return _Utils_Tuple2($author$project$Model$Step2, $elm$core$Platform$Cmd$none);
+					case 6:
+						return _Utils_Tuple2($author$project$Model$Step3, $elm$core$Platform$Cmd$none);
+					case 7:
+						return _Utils_Tuple2($author$project$Model$Terms, $elm$core$Platform$Cmd$none);
+					case 8:
+						return _Utils_Tuple2(
+							$author$project$Model$AudioPage(
+								{G: 0, af: 0}),
+							$elm$core$Platform$Cmd$none);
+					default:
+						return _Utils_Tuple2(model, $elm$core$Platform$Cmd$none);
+				}
 		}
 	});
-var $author$project$Main$PauseAudio = {$: 2};
-var $author$project$Main$PlayAudio = {$: 1};
+var $author$project$Msg$PauseAudio = {$: 2};
+var $author$project$Msg$PlayAudio = {$: 1};
 var $elm$html$Html$button = _VirtualDom_node('button');
 var $elm$json$Json$Encode$string = _Json_wrap;
 var $elm$html$Html$Attributes$stringProperty = F2(
@@ -5658,8 +5712,8 @@ var $elm$html$Html$Attributes$stringProperty = F2(
 			$elm$json$Json$Encode$string(string));
 	});
 var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
-var $author$project$Main$classFromModel = function (model) {
-	var _v0 = model.p;
+var $author$project$AudioPage$classFromModel = function (model) {
+	var _v0 = model.G;
 	switch (_v0) {
 		case 0:
 			return 'init';
@@ -5670,11 +5724,12 @@ var $author$project$Main$classFromModel = function (model) {
 	}
 };
 var $elm$html$Html$div = _VirtualDom_node('div');
-var $author$project$Main$formatSeconds = function (i) {
+var $author$project$AudioPage$formatSeconds = function (i) {
 	return (i > 9) ? $elm$core$String$fromInt(i) : ('0' + $elm$core$String$fromInt(i));
 };
 var $elm$html$Html$h1 = _VirtualDom_node('h1');
-var $elm$html$Html$Attributes$id = $elm$html$Html$Attributes$stringProperty('id');
+var $elm$html$Html$h2 = _VirtualDom_node('h2');
+var $elm$html$Html$h3 = _VirtualDom_node('h3');
 var $elm$core$Basics$modBy = _Basics_modBy;
 var $elm$virtual_dom$VirtualDom$Normal = function (a) {
 	return {$: 0, a: a};
@@ -5693,25 +5748,62 @@ var $elm$html$Html$Events$onClick = function (msg) {
 		'click',
 		$elm$json$Json$Decode$succeed(msg));
 };
+var $elm$html$Html$p = _VirtualDom_node('p');
 var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
-var $author$project$Main$view = function (model) {
-	var second = $author$project$Main$formatSeconds(
-		A2($elm$core$Basics$modBy, 60, model.x));
-	var minutes = $author$project$Main$formatSeconds((model.x / 60) | 0);
+var $author$project$AudioPage$viewAudioPage = function (model) {
+	var second = $author$project$AudioPage$formatSeconds(
+		A2($elm$core$Basics$modBy, 60, model.af));
+	var minutes = $author$project$AudioPage$formatSeconds((model.af / 60) | 0);
 	return A2(
 		$elm$html$Html$div,
 		_List_fromArray(
 			[
-				$elm$html$Html$Attributes$class('container')
+				$elm$html$Html$Attributes$class('column-space-between')
 			]),
 		_List_fromArray(
 			[
 				A2(
+				$elm$html$Html$h2,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('margin-top margin-bottom-4')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Mindfulness')
+					])),
+				A2(
 				$elm$html$Html$div,
 				_List_fromArray(
 					[
-						$elm$html$Html$Attributes$class('circle-container')
+						$elm$html$Html$Attributes$class('column')
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$h3,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Nome Sessione 1')
+							])),
+						A2(
+						$elm$html$Html$p,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('margin-top-2')
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Durata sessione: 20 minuti')
+							]))
+					])),
+				A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('container')
 					]),
 				_List_fromArray(
 					[
@@ -5719,17 +5811,26 @@ var $author$project$Main$view = function (model) {
 						$elm$html$Html$div,
 						_List_fromArray(
 							[
-								$elm$html$Html$Attributes$class(
-								$author$project$Main$classFromModel(model))
+								$elm$html$Html$Attributes$class('circle-container')
 							]),
 						_List_fromArray(
 							[
 								A2(
-								$elm$html$Html$h1,
-								_List_Nil,
+								$elm$html$Html$div,
 								_List_fromArray(
 									[
-										$elm$html$Html$text(minutes + (':' + second))
+										$elm$html$Html$Attributes$class(
+										$author$project$AudioPage$classFromModel(model))
+									]),
+								_List_fromArray(
+									[
+										A2(
+										$elm$html$Html$h1,
+										_List_Nil,
+										_List_fromArray(
+											[
+												$elm$html$Html$text(minutes + (':' + second))
+											]))
 									]))
 							]))
 					])),
@@ -5739,23 +5840,23 @@ var $author$project$Main$view = function (model) {
 					[
 						$elm$html$Html$Events$onClick(
 						function () {
-							var _v0 = model.p;
+							var _v0 = model.G;
 							switch (_v0) {
 								case 0:
-									return $author$project$Main$PlayAudio;
+									return $author$project$Msg$PlayAudio;
 								case 1:
-									return $author$project$Main$PauseAudio;
+									return $author$project$Msg$PauseAudio;
 								default:
-									return $author$project$Main$PlayAudio;
+									return $author$project$Msg$PlayAudio;
 							}
 						}()),
-						$elm$html$Html$Attributes$id('input')
+						$elm$html$Html$Attributes$class('input margin-bottom-4')
 					]),
 				_List_fromArray(
 					[
 						$elm$html$Html$text(
 						function () {
-							var _v1 = model.p;
+							var _v1 = model.G;
 							switch (_v1) {
 								case 0:
 									return 'Play';
@@ -5767,6 +5868,331 @@ var $author$project$Main$view = function (model) {
 						}())
 					]))
 			]));
+};
+var $author$project$Msg$ToStep1 = {$: 4};
+var $author$project$Msg$ToTerms = {$: 7};
+var $elm$html$Html$img = _VirtualDom_node('img');
+var $elm$html$Html$Attributes$src = function (url) {
+	return A2(
+		$elm$html$Html$Attributes$stringProperty,
+		'src',
+		_VirtualDom_noJavaScriptOrHtmlUri(url));
+};
+var $author$project$Intro$viewIntro = function (_v0) {
+	return A2(
+		$elm$html$Html$div,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$class('column-space-between')
+			]),
+		_List_fromArray(
+			[
+				A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('column')
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$div,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('app_bar')
+							]),
+						_List_fromArray(
+							[
+								A2(
+								$elm$html$Html$h1,
+								_List_Nil,
+								_List_fromArray(
+									[
+										$elm$html$Html$text('Benvenuto su Mindfulness')
+									]))
+							])),
+						A2(
+						$elm$html$Html$p,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('description')
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Sei uno dei nostri eroi. Grazie per quello che fai. Prenditi una pausa e dedica un po\' di tempo a te stesso. Ti consigliamo di utilizzare Mindfulness una volta concluso il tuo turno di lavoro o a casa per rigenerarti.')
+							])),
+						A2(
+						$elm$html$Html$p,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('description')
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('La mindfulness è un metodo validato che permette di passare da uno stato di sofferenza a una percezione soggettiva di benessere, grazie alla conoscenza profonda degli stati mentali.')
+							]))
+					])),
+				A2(
+				$elm$html$Html$img,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$src('Illustration_welcome.svg')
+					]),
+				_List_Nil),
+				A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('column')
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$button,
+						_List_fromArray(
+							[
+								$elm$html$Html$Events$onClick($author$project$Msg$ToStep1),
+								$elm$html$Html$Attributes$class('input_primary')
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Iniziamo')
+							])),
+						A2(
+						$elm$html$Html$button,
+						_List_fromArray(
+							[
+								$elm$html$Html$Events$onClick($author$project$Msg$ToTerms),
+								$elm$html$Html$Attributes$class('input_flat')
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Leggi le avvertenze')
+							]))
+					]))
+			]));
+};
+var $author$project$Msg$ToIntro = {$: 3};
+var $author$project$Main$viewSplash = function (_v0) {
+	return A2(
+		$elm$html$Html$button,
+		_List_fromArray(
+			[
+				$elm$html$Html$Events$onClick($author$project$Msg$ToIntro),
+				$elm$html$Html$Attributes$class('input')
+			]),
+		_List_fromArray(
+			[
+				$elm$html$Html$text('Splash page')
+			]));
+};
+var $author$project$Msg$ToStep2 = {$: 5};
+var $elm$html$Html$br = _VirtualDom_node('br');
+var $author$project$Step1$viewStep1 = function (model) {
+	return A2(
+		$elm$html$Html$div,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$class('column-space-between')
+			]),
+		_List_fromArray(
+			[
+				A2(
+				$elm$html$Html$h2,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('tutorial_item margin-top-2')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Dai a te stesso il'),
+						A2($elm$html$Html$br, _List_Nil, _List_Nil),
+						$elm$html$Html$text('permesso di dedicarti'),
+						A2($elm$html$Html$br, _List_Nil, _List_Nil),
+						$elm$html$Html$text('20 minuti di tempo.')
+					])),
+				A2(
+				$elm$html$Html$img,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$src('Illustration_time.svg')
+					]),
+				_List_Nil),
+				A2(
+				$elm$html$Html$button,
+				_List_fromArray(
+					[
+						$elm$html$Html$Events$onClick($author$project$Msg$ToStep2),
+						$elm$html$Html$Attributes$class('input_flat margin-bottom-4')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Tocca per continuare')
+					]))
+			]));
+};
+var $author$project$Msg$ToStep3 = {$: 6};
+var $author$project$Step2$viewStep2 = function (model) {
+	return A2(
+		$elm$html$Html$div,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$class('column-space-between')
+			]),
+		_List_fromArray(
+			[
+				A2(
+				$elm$html$Html$h2,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('tutorial_item margin-top-2')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Trova un luogo '),
+						A2($elm$html$Html$br, _List_Nil, _List_Nil),
+						$elm$html$Html$text('tranquillo.'),
+						A2($elm$html$Html$br, _List_Nil, _List_Nil),
+						$elm$html$Html$text('Se possibile, indossa'),
+						A2($elm$html$Html$br, _List_Nil, _List_Nil),
+						$elm$html$Html$text('delle cuffie auricolari.')
+					])),
+				A2(
+				$elm$html$Html$img,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$src('Illustration_sound.svg')
+					]),
+				_List_Nil),
+				A2(
+				$elm$html$Html$button,
+				_List_fromArray(
+					[
+						$elm$html$Html$Events$onClick($author$project$Msg$ToStep3),
+						$elm$html$Html$Attributes$class('input_flat margin-bottom-4')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Tocca per continuare')
+					]))
+			]));
+};
+var $author$project$Msg$ToAudioPage = {$: 8};
+var $author$project$Step3$viewStep3 = function (model) {
+	return A2(
+		$elm$html$Html$div,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$class('column-space-between')
+			]),
+		_List_fromArray(
+			[
+				A2(
+				$elm$html$Html$h2,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('tutorial_item margin-top-2')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Mettiti comodo, trova'),
+						A2($elm$html$Html$br, _List_Nil, _List_Nil),
+						$elm$html$Html$text('una posizione'),
+						A2($elm$html$Html$br, _List_Nil, _List_Nil),
+						$elm$html$Html$text('confortevole seduto'),
+						A2($elm$html$Html$br, _List_Nil, _List_Nil),
+						$elm$html$Html$text('o steso')
+					])),
+				A2(
+				$elm$html$Html$img,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$src('Illustration_posture.svg')
+					]),
+				_List_Nil),
+				A2(
+				$elm$html$Html$button,
+				_List_fromArray(
+					[
+						$elm$html$Html$Events$onClick($author$project$Msg$ToAudioPage),
+						$elm$html$Html$Attributes$class('input_flat margin-bottom-4')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Iniziamo')
+					]))
+			]));
+};
+var $author$project$Terms$viewTerms = function (_v0) {
+	return A2(
+		$elm$html$Html$div,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$class('column')
+			]),
+		_List_fromArray(
+			[
+				A2(
+				$elm$html$Html$h2,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('margin-top')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Avvertenze')
+					])),
+				A2(
+				$elm$html$Html$p,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('description')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Prima di cominciare, ti prego di leggere queste indicazioni.\nLe tracce che potrai ascoltare, non sono da intendersi come alternativa ad un percorso medico o terapeutico, prescritto per un disturbo di qualsiasi genere, fisico o mentale. Sono invece da considerarsi come un supporto al cambiamento, alla crescita personale, e come strumento di facilitazione delle risposte fisiologiche e naturali del nostro sistema mente-corpo. ')
+					])),
+				A2(
+				$elm$html$Html$p,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('description')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Queste tracce sono state elaborate sulla base delle conoscenze relative all’attivazione neuronale e corticale della\nnostra unità psiche-soma, e per questa ragione hanno proprietà rilassanti e trasformative, intense ed efficaci.\nPer questo devono essere usate in un luogo protetto e tranquillo, certamente non mentre stai guidando o stai usando macchinari pericolosi.\nSe hai compreso e accetti queste avvertenze, allora siamo pronti ad iniziare.')
+					])),
+				A2(
+				$elm$html$Html$button,
+				_List_fromArray(
+					[
+						$elm$html$Html$Events$onClick($author$project$Msg$ToStep1),
+						$elm$html$Html$Attributes$class('input_primary')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Iniziamo')
+					]))
+			]));
+};
+var $author$project$Main$view = function (model) {
+	switch (model.$) {
+		case 6:
+			var p = model.a;
+			return $author$project$AudioPage$viewAudioPage(p);
+		case 0:
+			return $author$project$Main$viewSplash(0);
+		case 1:
+			return $author$project$Intro$viewIntro(0);
+		case 2:
+			return $author$project$Step1$viewStep1(0);
+		case 3:
+			return $author$project$Step2$viewStep2(0);
+		case 4:
+			return $author$project$Step3$viewStep3(0);
+		default:
+			return $author$project$Terms$viewTerms(0);
+	}
 };
 var $author$project$Main$main = $elm$browser$Browser$element(
 	{av: $author$project$Main$init, aB: $author$project$Main$subscriptions, aD: $author$project$Main$update, aE: $author$project$Main$view});
