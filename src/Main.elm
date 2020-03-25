@@ -33,7 +33,7 @@ main =
 
 init : () -> (PageState, Cmd Msg)
 init _ =
-  ( SplashPage 0
+  ( Intro
   , Cmd.none
   )
 
