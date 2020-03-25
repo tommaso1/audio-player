@@ -5624,100 +5624,6 @@ var $author$project$Model$Stop = 2;
 var $author$project$Model$Terms = {$: 5};
 var $elm$json$Json$Encode$bool = _Json_wrap;
 var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
 var $author$project$Main$update = F2(
 	function (msg, model) {
 		switch (model.$) {
@@ -6219,39 +6125,48 @@ var $author$project$Terms$viewTerms = function (_v0) {
 		$elm$html$Html$div,
 		_List_fromArray(
 			[
-				$elm$html$Html$Attributes$class('column')
+				$elm$html$Html$Attributes$class('column-space-between')
 			]),
 		_List_fromArray(
 			[
 				A2(
-				$elm$html$Html$h2,
+				$elm$html$Html$div,
 				_List_fromArray(
 					[
-						$elm$html$Html$Attributes$class('margin-top')
+						$elm$html$Html$Attributes$class('column')
 					]),
 				_List_fromArray(
 					[
-						$elm$html$Html$text('Avvertenze')
-					])),
-				A2(
-				$elm$html$Html$p,
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$class('description')
-					]),
-				_List_fromArray(
-					[
-						$elm$html$Html$text('Prima di cominciare, ti prego di leggere queste indicazioni.\nLe tracce che potrai ascoltare, non sono da intendersi come alternativa ad un percorso medico o terapeutico, prescritto per un disturbo di qualsiasi genere, fisico o mentale. Sono invece da considerarsi come un supporto al cambiamento, alla crescita personale, e come strumento di facilitazione delle risposte fisiologiche e naturali del nostro sistema mente-corpo. ')
-					])),
-				A2(
-				$elm$html$Html$p,
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$class('description')
-					]),
-				_List_fromArray(
-					[
-						$elm$html$Html$text('Queste tracce sono state elaborate sulla base delle conoscenze relative all’attivazione neuronale e corticale della\nnostra unità psiche-soma, e per questa ragione hanno proprietà rilassanti e trasformative, intense ed efficaci.\nPer questo devono essere usate in un luogo protetto e tranquillo, certamente non mentre stai guidando o stai usando macchinari pericolosi.\nSe hai compreso e accetti queste avvertenze, allora siamo pronti ad iniziare.')
+						A2(
+						$elm$html$Html$h2,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('margin-top')
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Avvertenze')
+							])),
+						A2(
+						$elm$html$Html$p,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('description')
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Prima di cominciare, ti prego di leggere queste indicazioni.\nLe tracce che potrai ascoltare, non sono da intendersi come alternativa ad un percorso medico o terapeutico, prescritto per un disturbo di qualsiasi genere, fisico o mentale. Sono invece da considerarsi come un supporto al cambiamento, alla crescita personale, e come strumento di facilitazione delle risposte fisiologiche e naturali del nostro sistema mente-corpo. ')
+							])),
+						A2(
+						$elm$html$Html$p,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('description')
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Queste tracce sono state elaborate sulla base delle conoscenze relative all’attivazione neuronale e corticale della\nnostra unità psiche-soma, e per questa ragione hanno proprietà rilassanti e trasformative, intense ed efficaci.\nPer questo devono essere usate in un luogo protetto e tranquillo, certamente non mentre stai guidando o stai usando macchinari pericolosi.\nSe hai compreso e accetti queste avvertenze, allora siamo pronti ad iniziare.')
+							]))
 					])),
 				A2(
 				$elm$html$Html$button,
