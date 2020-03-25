@@ -5190,15 +5190,11 @@ var $elm$core$Task$perform = F2(
 				A2($elm$core$Task$map, toMessage, task)));
 	});
 var $elm$browser$Browser$element = _Browser_element;
-var $author$project$Model$SplashPage = function (a) {
-	return {$: 'SplashPage', a: a};
-};
+var $author$project$Model$Intro = {$: 'Intro'};
 var $elm$core$Platform$Cmd$batch = _Platform_batch;
 var $elm$core$Platform$Cmd$none = $elm$core$Platform$Cmd$batch(_List_Nil);
 var $author$project$Main$init = function (_v0) {
-	return _Utils_Tuple2(
-		$author$project$Model$SplashPage(0),
-		$elm$core$Platform$Cmd$none);
+	return _Utils_Tuple2($author$project$Model$Intro, $elm$core$Platform$Cmd$none);
 };
 var $author$project$Msg$Tick = function (a) {
 	return {$: 'Tick', a: a};
@@ -5625,8 +5621,10 @@ var $author$project$Model$AudioPage = function (a) {
 	return {$: 'AudioPage', a: a};
 };
 var $author$project$Model$Idle = {$: 'Idle'};
-var $author$project$Model$Intro = {$: 'Intro'};
 var $author$project$Model$Play = {$: 'Play'};
+var $author$project$Model$SplashPage = function (a) {
+	return {$: 'SplashPage', a: a};
+};
 var $author$project$Model$Step1 = {$: 'Step1'};
 var $author$project$Model$Step2 = {$: 'Step2'};
 var $author$project$Model$Step3 = {$: 'Step3'};
@@ -5830,18 +5828,81 @@ var $author$project$AudioPage$viewAudioPage = function (model) {
 };
 var $author$project$Msg$ToStep1 = {$: 'ToStep1'};
 var $author$project$Msg$ToTerms = {$: 'ToTerms'};
-var $author$project$Main$viewIntro = function (_v0) {
+var $elm$html$Html$img = _VirtualDom_node('img');
+var $elm$html$Html$p = _VirtualDom_node('p');
+var $elm$html$Html$Attributes$src = function (url) {
+	return A2(
+		$elm$html$Html$Attributes$stringProperty,
+		'src',
+		_VirtualDom_noJavaScriptOrHtmlUri(url));
+};
+var $author$project$Intro$viewIntro = function (_v0) {
 	return A2(
 		$elm$html$Html$div,
-		_List_Nil,
 		_List_fromArray(
 			[
+				$elm$html$Html$Attributes$class('column')
+			]),
+		_List_fromArray(
+			[
+				A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('app_bar')
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$h1,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Benvenuto su Mindfulness')
+							]))
+					])),
+				A2(
+				$elm$html$Html$p,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('description')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Sei uno dei nostri eroi. Grazie per quello che fai. Prenditi una pausa e dedica un po\' di tempo a te stesso. Ti consigliamo di utilizzare Mindfulness una volta concluso il tuo turno di lavoro o a casa per rigenerarti.')
+					])),
+				A2(
+				$elm$html$Html$p,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('description')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('La mindfulness è un metodo validato che permette di passare da uno stato di sofferenza a una percezione soggettiva di benessere, grazie alla conoscenza profonda degli stati mentali.')
+					])),
+				A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('image')
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$img,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$src('Illustration_welcome.svg')
+							]),
+						_List_Nil)
+					])),
 				A2(
 				$elm$html$Html$button,
 				_List_fromArray(
 					[
 						$elm$html$Html$Events$onClick($author$project$Msg$ToStep1),
-						$elm$html$Html$Attributes$class('input')
+						$elm$html$Html$Attributes$class('input_primary')
 					]),
 				_List_fromArray(
 					[
@@ -5852,11 +5913,11 @@ var $author$project$Main$viewIntro = function (_v0) {
 				_List_fromArray(
 					[
 						$elm$html$Html$Events$onClick($author$project$Msg$ToTerms),
-						$elm$html$Html$Attributes$class('input')
+						$elm$html$Html$Attributes$class('input_flat')
 					]),
 				_List_fromArray(
 					[
-						$elm$html$Html$text('Termini e condizioni')
+						$elm$html$Html$text('Leggi le avvertenze')
 					]))
 			]));
 };
@@ -5934,22 +5995,56 @@ var $author$project$Main$viewStep3 = function (model) {
 					]))
 			]));
 };
-var $author$project$Main$viewTerms = function (_v0) {
+var $elm$html$Html$h2 = _VirtualDom_node('h2');
+var $author$project$Terms$viewTerms = function (_v0) {
 	return A2(
 		$elm$html$Html$div,
-		_List_Nil,
 		_List_fromArray(
 			[
+				$elm$html$Html$Attributes$class('column')
+			]),
+		_List_fromArray(
+			[
+				A2(
+				$elm$html$Html$h2,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('margin-top')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Avvertenze')
+					])),
+				A2(
+				$elm$html$Html$p,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('description')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Prima di cominciare, ti prego di leggere queste indicazioni.\nLe tracce che potrai ascoltare, non sono da intendersi come alternativa ad un percorso medico o terapeutico, prescritto per un disturbo di qualsiasi genere, fisico o mentale. Sono invece da considerarsi come un supporto al cambiamento, alla crescita personale, e come strumento di facilitazione delle risposte fisiologiche e naturali del nostro sistema mente-corpo. ')
+					])),
+				A2(
+				$elm$html$Html$p,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('description')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Queste tracce sono state elaborate sulla base delle conoscenze relative all’attivazione neuronale e corticale della\nnostra unità psiche-soma, e per questa ragione hanno proprietà rilassanti e trasformative, intense ed efficaci.\nPer questo devono essere usate in un luogo protetto e tranquillo, certamente non mentre stai guidando o stai usando macchinari pericolosi.\nSe hai compreso e accetti queste avvertenze, allora siamo pronti ad iniziare.')
+					])),
 				A2(
 				$elm$html$Html$button,
 				_List_fromArray(
 					[
 						$elm$html$Html$Events$onClick($author$project$Msg$ToStep1),
-						$elm$html$Html$Attributes$class('input')
+						$elm$html$Html$Attributes$class('input_primary')
 					]),
 				_List_fromArray(
 					[
-						$elm$html$Html$text('Ok')
+						$elm$html$Html$text('Iniziamo')
 					]))
 			]));
 };
@@ -5961,7 +6056,7 @@ var $author$project$Main$view = function (model) {
 		case 'SplashPage':
 			return $author$project$Main$viewSplash(_Utils_Tuple0);
 		case 'Intro':
-			return $author$project$Main$viewIntro(_Utils_Tuple0);
+			return $author$project$Intro$viewIntro(_Utils_Tuple0);
 		case 'Step1':
 			return $author$project$Main$viewStep1(_Utils_Tuple0);
 		case 'Step2':
@@ -5969,7 +6064,7 @@ var $author$project$Main$view = function (model) {
 		case 'Step3':
 			return $author$project$Main$viewStep3(_Utils_Tuple0);
 		default:
-			return $author$project$Main$viewTerms(_Utils_Tuple0);
+			return $author$project$Terms$viewTerms(_Utils_Tuple0);
 	}
 };
 var $author$project$Main$main = $elm$browser$Browser$element(

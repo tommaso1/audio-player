@@ -8,6 +8,8 @@ import Model exposing (PageState(..), AudioPageModel, PlayerState(..))
 import Msg exposing (Msg(..))
 import Html.Attributes exposing (..)
 import Html.Events exposing (onInput, onClick)
+import Intro exposing (..)
+import Terms exposing (..)
 
 port playNotification : Bool -> Cmd msg
 
@@ -28,7 +30,7 @@ main =
 
 init : () -> (PageState, Cmd Msg)
 init _ =
-  ( SplashPage 0
+  ( Intro
   , Cmd.none
   )
 
@@ -84,14 +86,7 @@ viewSplash () =  button [ onClick ToIntro, class "input"] [
         text "Splash page"
       ]
 
-viewIntro : () -> Html Msg
-viewIntro () =  div [] [ button [ onClick ToStep1, class "input"] [ text "Iniziamo" ]
-    , button [ onClick ToTerms, class "input"] [ text "Termini e condizioni" ]
-  ]
 
-viewTerms : () -> Html Msg
-viewTerms () =  div [] [ button [ onClick ToStep1, class "input"] [ text "Ok" ]
-  ]
 
 viewStep1 : () -> Html Msg
 viewStep1 model =  div [] [ button [ onClick ToStep2, class "input"] [ text "Tocca per continuare" ]  
