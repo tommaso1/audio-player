@@ -50,6 +50,7 @@ update msg model = case model of
       ToIntro -> (Intro, Cmd.none)
       ToStep1 -> (Step1, Cmd.none)
       ToStep2 -> (Step2, Cmd.none)
+      ToStep3 -> (Step3, Cmd.none)
       ToTerms -> (Terms, Cmd.none)
       ToAudioPage  -> (AudioPage { seconds = 0, playerState = Idle}, Cmd.none)
       _ -> (model, Cmd.none)
@@ -73,6 +74,7 @@ view model = case model of
   Intro -> viewIntro()
   Step1 -> viewStep1()
   Step2 -> viewStep2()
+  Step3 -> viewStep3()
   Terms -> viewTerms()
 
 
@@ -88,7 +90,7 @@ viewIntro () =  div [] [ button [ onClick ToStep1, class "input"] [ text "Inizia
   ]
 
 viewTerms : () -> Html Msg
-viewTerms () =  div [] [ button [ onClick ToIntro, class "input"] [ text "Ok" ]
+viewTerms () =  div [] [ button [ onClick ToStep1, class "input"] [ text "Ok" ]
   ]
 
 viewStep1 : () -> Html Msg
@@ -97,5 +99,11 @@ viewStep1 model =  div [] [ button [ onClick ToStep2, class "input"] [ text "Toc
 
 
 viewStep2 : () -> Html Msg
-viewStep2 model =  div [] [ button [ onClick ToAudioPage, class "input"] [ text "Iniziamo" ]  
+viewStep2 model =  div [] [ button [ onClick ToStep3, class "input"] [ text "Iniziamo" ]  
+  ]
+
+
+
+viewStep3 : () -> Html Msg
+viewStep3 model =  div [] [ button [ onClick ToAudioPage, class "input"] [ text "Iniziamo" ]  
   ]

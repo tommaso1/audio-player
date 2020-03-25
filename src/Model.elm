@@ -6,6 +6,7 @@ type PageState =  SplashPage Int
                 | Intro
                 | Step1
                 | Step2
+                | Step3
                 | Terms
                 | AudioPage AudioPageModel
 

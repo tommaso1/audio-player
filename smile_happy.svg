@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="95px" height="95px" viewBox="0 0 95 95" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>smile_happy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M86.555,43.278 C86.555,67.18 67.18,86.556 43.277,86.556 C19.375,86.556 1.42108547e-13,67.18 1.42108547e-13,43.278 C1.42108547e-13,19.374 19.375,-1.70530257e-13 43.277,-1.70530257e-13 C67.18,-1.70530257e-13 86.555,19.374 86.555,43.278" id="path-1"></path>
+        <filter x="-8.1%" y="-5.8%" width="116.2%" height="116.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.209926792 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Azzurro" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Faccine" transform="translate(-36.000000, -403.000000)">
+            <g id="smile_happy" transform="translate(40.000000, 405.000000)">
+                <g id="Fill-89">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <path d="M68.358,37.698 C68.807,37.975 69.399,37.66 69.399,37.133 L69.399,37.12 C69.399,33.963 66.839,31.402 63.682,31.402 C60.525,31.402 57.966,33.963 57.966,37.12 L57.966,37.133 C57.966,37.66 58.558,37.975 59.007,37.698 C60.365,36.858 61.967,36.372 63.682,36.372 C65.398,36.372 66.999,36.858 68.358,37.698" id="Fill-90" fill="#45281C"></path>
+                <path d="M27.551,37.698 C27.998,37.975 28.588,37.66 28.591,37.133 L28.591,37.12 C28.591,33.963 26.031,31.402 22.872,31.402 C19.714,31.402 17.155,33.963 17.155,37.12 L17.155,37.133 C17.157,37.66 17.748,37.975 18.196,37.698 C19.556,36.858 21.156,36.372 22.872,36.372 C24.588,36.372 26.19,36.858 27.551,37.698" id="Fill-91" fill="#45281C"></path>
+                <path d="M43.512,62.992 C36.269,62.992 29.103,60.191 23.85,55.309 C22.994,54.513 22.944,53.174 23.741,52.317 C24.535,51.462 25.876,51.411 26.732,52.208 C31.21,56.37 37.326,58.758 43.512,58.758 C49.478,58.758 55.436,56.514 59.861,52.6 C60.738,51.828 62.074,51.91 62.849,52.784 C63.623,53.66 63.541,54.997 62.665,55.772 C57.401,60.428 50.6,62.992 43.512,62.992" id="Fill-92" fill="#45281C"></path>
+            </g>
+        </g>
+    </g>
+</svg>

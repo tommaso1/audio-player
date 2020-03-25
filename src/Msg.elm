@@ -9,5 +9,6 @@ type Msg = Tick Time.Posix
          | ToIntro
          | ToStep1
          | ToStep2
+         | ToStep3
          | ToTerms
          | ToAudioPage 

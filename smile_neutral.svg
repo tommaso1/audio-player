@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="95px" height="95px" viewBox="0 0 95 95" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>smile_neutral</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-13.8%" y="-13.8%" width="127.6%" height="127.6%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.21 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Azzurro" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Faccine" transform="translate(-160.000000, -403.000000)">
+            <g id="smile_neutral" filter="url(#filter-1)" transform="translate(164.000000, 405.000000)">
+                <path d="M86.556,43.278 C86.556,67.181 67.181,86.555 43.278,86.555 C19.375,86.555 2.48689958e-13,67.181 2.48689958e-13,43.278 C2.48689958e-13,19.375 19.375,-5.68434189e-14 43.278,-5.68434189e-14 C67.181,-5.68434189e-14 86.556,19.375 86.556,43.278" id="Fill-52" fill="#FFFFFF"></path>
+                <path d="M63.027,56.704 L23.529,56.704 C22.36,56.704 21.413,55.757 21.413,54.587 C21.413,53.419 22.36,52.471 23.529,52.471 L63.027,52.471 C64.196,52.471 65.143,53.419 65.143,54.587 C65.143,55.757 64.196,56.704 63.027,56.704" id="Fill-53" fill="#45281C"></path>
+                <path d="M65.922,35.913 C65.922,38.436 63.877,40.481 61.353,40.481 C58.829,40.481 56.784,38.436 56.784,35.913 C56.784,33.39 58.829,31.344 61.353,31.344 C63.877,31.344 65.922,33.39 65.922,35.913" id="Fill-54" fill="#45281C"></path>
+                <path d="M29.77,35.913 C29.77,38.436 27.724,40.481 25.202,40.481 C22.679,40.481 20.632,38.436 20.632,35.913 C20.632,33.39 22.679,31.344 25.202,31.344 C27.724,31.344 29.77,33.39 29.77,35.913" id="Fill-55" fill="#45281C"></path>
+            </g>
+        </g>
+    </g>
+</svg>
