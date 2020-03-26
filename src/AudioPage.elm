@@ -39,7 +39,7 @@ viewAudioPage model =
           Stop -> "Play"
         )
       ]
-    , button [ onClick ToThanks, class "input_flat margin-bottom-4"] [
+    , button [ onClick ToQuestionary, class "input_flat margin-bottom-4"] [
         text "Credits"
       ]
   ]

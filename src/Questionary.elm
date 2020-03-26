@@ -23,7 +23,8 @@ viewQuesitonary m = div [ class "column-space-between" ] [
             , button [ onClick Normal, class "smile-button"] [ img [ src "smile_neutral.svg" ] [] ]
             , button [ onClick Msg.Sad, class "smile-button"] [ img [ src "smile_sad.svg" ] [] ]
     ]
-    -- , a [
-    --     class "input_flat", href "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-    -- ] [ text "Compila il quesitonario" ]
+    , a [
+        class "input_flat"
+        -- , href "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    ] [ text "Compila il quesitonario" ]
   ]

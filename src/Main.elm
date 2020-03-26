@@ -53,6 +53,7 @@ update msg model = case model of
           (PlayAudio, _) -> (AudioPage { m | playerState = Play }, playNotification True)
           (PauseAudio, _) -> (AudioPage { m | playerState = Stop }, playNotification False)
           (ToThanks, _) -> (Thanks, playNotification False)
+          (ToQuestionary, _) -> (Questionary None, playNotification False)
           (_, _) -> (model, Cmd.none)
     SplashPage 2 -> (Intro, Cmd.none)
     SplashPage p -> case msg of 

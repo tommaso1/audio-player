@@ -6489,6 +6489,11 @@ var $author$project$Main$update = F2(
 						return _Utils_Tuple2(
 							$author$project$Model$Thanks,
 							$author$project$Main$playNotification(false));
+					case 8:
+						var _v7 = _v1.a;
+						return _Utils_Tuple2(
+							$author$project$Model$Questionary(3),
+							$author$project$Main$playNotification(false));
 					default:
 						return _Utils_Tuple2(model, $elm$core$Platform$Cmd$none);
 				}
@@ -6563,7 +6568,7 @@ var $author$project$Main$update = F2(
 	});
 var $author$project$Msg$PauseAudio = {$: 2};
 var $author$project$Msg$PlayAudio = {$: 1};
-var $author$project$Msg$ToThanks = {$: 7};
+var $author$project$Msg$ToQuestionary = {$: 8};
 var $elm$html$Html$button = _VirtualDom_node('button');
 var $elm$json$Json$Encode$string = _Json_wrap;
 var $elm$html$Html$Attributes$stringProperty = F2(
@@ -6733,7 +6738,7 @@ var $author$project$AudioPage$viewAudioPage = function (model) {
 				$elm$html$Html$button,
 				_List_fromArray(
 					[
-						$elm$html$Html$Events$onClick($author$project$Msg$ToThanks),
+						$elm$html$Html$Events$onClick($author$project$Msg$ToQuestionary),
 						$elm$html$Html$Attributes$class('input_flat margin-bottom-4')
 					]),
 				_List_fromArray(
@@ -6742,6 +6747,7 @@ var $author$project$AudioPage$viewAudioPage = function (model) {
 					]))
 			]));
 };
+var $elm$html$Html$br = _VirtualDom_node('br');
 var $elm$html$Html$img = _VirtualDom_node('img');
 var $elm$html$Html$Attributes$src = function (url) {
 	return A2(
@@ -6820,60 +6826,20 @@ var $author$project$Credits$viewCredits = function (_v0) {
 				$elm$html$Html$p,
 				_List_fromArray(
 					[
-						$elm$html$Html$Attributes$class('credit-item')
+						$elm$html$Html$Attributes$class('')
 					]),
 				_List_fromArray(
 					[
-						$elm$html$Html$text('Fausto Panizzolo')
-					])),
-				A2(
-				$elm$html$Html$p,
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$class('credit-item')
-					]),
-				_List_fromArray(
-					[
-						$elm$html$Html$text('Pier Mattia Avesani')
-					])),
-				A2(
-				$elm$html$Html$p,
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$class('credit-item')
-					]),
-				_List_fromArray(
-					[
-						$elm$html$Html$text('Anna Germin')
-					])),
-				A2(
-				$elm$html$Html$p,
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$class('credit-item')
-					]),
-				_List_fromArray(
-					[
-						$elm$html$Html$text('Giulia Mastrella')
-					])),
-				A2(
-				$elm$html$Html$p,
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$class('credit-item')
-					]),
-				_List_fromArray(
-					[
-						$elm$html$Html$text('Tommaso Rosso')
-					])),
-				A2(
-				$elm$html$Html$p,
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$class('credit-item')
-					]),
-				_List_fromArray(
-					[
+						$elm$html$Html$text('Fausto Panizzolo'),
+						A2($elm$html$Html$br, _List_Nil, _List_Nil),
+						$elm$html$Html$text('Pier Mattia Avesani'),
+						A2($elm$html$Html$br, _List_Nil, _List_Nil),
+						$elm$html$Html$text('Anna Germin'),
+						A2($elm$html$Html$br, _List_Nil, _List_Nil),
+						$elm$html$Html$text('Giulia Mastrella'),
+						A2($elm$html$Html$br, _List_Nil, _List_Nil),
+						$elm$html$Html$text('Tommaso Rosso'),
+						A2($elm$html$Html$br, _List_Nil, _List_Nil),
 						$elm$html$Html$text('Camilla Stevani')
 					])),
 				A2(
@@ -7006,7 +6972,7 @@ var $author$project$Intro$viewIntro = function (_v0) {
 var $author$project$Msg$Happy = {$: 12};
 var $author$project$Msg$Normal = {$: 14};
 var $author$project$Msg$Sad = {$: 13};
-var $elm$html$Html$br = _VirtualDom_node('br');
+var $elm$html$Html$a = _VirtualDom_node('a');
 var $author$project$Questionary$viewQuesitonary = function (m) {
 	return A2(
 		$elm$html$Html$div,
@@ -7103,6 +7069,16 @@ var $author$project$Questionary$viewQuesitonary = function (m) {
 									]),
 								_List_Nil)
 							]))
+					])),
+				A2(
+				$elm$html$Html$a,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('input_flat')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Compila il quesitonario')
 					]))
 			]));
 };

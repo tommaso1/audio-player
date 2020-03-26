@@ -11,7 +11,8 @@ var urlsToCache = [
   '/audio-player/Illustration_welcome.svg',
   '/audio-player/smile_happy.svg',
   '/audio-player/smile_neutral.svg',
-  '/audio-player/smile_sad.svg'
+  '/audio-player/smile_sad.svg',
+  '/audio-player/uqido.png',
 ];
 
 self.addEventListener('install', function(event) {
