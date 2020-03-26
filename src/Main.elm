@@ -4,15 +4,18 @@ import Html exposing (..)
 import Browser
 import Time
 import AudioPage exposing (..)
-import Model exposing (PageState(..), AudioPageModel, PlayerState(..))
+import Model exposing (PageState(..), AudioPageModel, PlayerState(..), Mood(..))
 import Msg exposing (Msg(..))
 import Html.Attributes exposing (..)
-import Html.Events exposing (onInput, onClick)
+import Html.Events exposing (..)
 import Intro exposing (..)
 import Terms exposing (..)
 import Step1 exposing (..)
 import Step2 exposing (..)
 import Step3 exposing (..)
+import Thanks exposing (..)
+import Credits exposing (..)
+import Questionary exposing (..)
 
 port playNotification : Bool -> Cmd msg
 
@@ -57,6 +60,9 @@ update msg model = case model of
       ToStep2 -> (Step2, Cmd.none)
       ToStep3 -> (Step3, Cmd.none)
       ToTerms -> (Terms, Cmd.none)
+      ToThanks -> (Thanks, Cmd.none)
+      ToQuestionary -> (Questionary None, Cmd.none)
+      ToCredits -> (Credits, Cmd.none)
       ToAudioPage  -> (AudioPage { seconds = 0, playerState = Idle}, Cmd.none)
       _ -> (model, Cmd.none)
 
@@ -81,6 +87,10 @@ view model = case model of
   Step2 -> viewStep2()
   Step3 -> viewStep3()
   Terms -> viewTerms()
+  Thanks -> viewThanks()
+  Credits -> viewCredits()
+  _ -> viewCredits()
+  -- Questionary s -> viewQuestionary s
 
 
 

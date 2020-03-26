@@ -16,6 +16,6 @@ viewStep1 model =  div [ class "column-space-between" ] [
         , br [][]
         , text "20 minuti di tempo." 
     ]
-    , img [ src "Illustration_time.svg" ] []
+    , div[ class "img-container"] [ img [ src "Illustration_time.svg" ] [] ]
     , button [ onClick ToStep2, class "input_flat margin-bottom-4"] [ text "Tocca per continuare" ]  
   ]

@@ -18,6 +18,6 @@ viewStep2 model =  div [ class "column-space-between" ] [
         , br [][]
         , text "delle cuffie auricolari."
     ]
-    , img [ src "Illustration_sound.svg" ] []
+    , div[ class "img-container"] [ img [ src "Illustration_sound.svg" ] [] ]
     , button [ onClick ToStep3, class "input_flat margin-bottom-4"] [ text "Tocca per continuare" ]  
   ]

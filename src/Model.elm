@@ -1,4 +1,4 @@
-module Model exposing (PageState(..), AudioPageModel, PlayerState(..))
+module Model exposing (PageState(..), AudioPageModel, PlayerState(..), Mood(..))
 
 
 -- MODEL
@@ -8,6 +8,9 @@ type PageState =  SplashPage Int
                 | Step2
                 | Step3
                 | Terms
+                | Thanks
+                | Credits
+                | Questionary Mood
                 | AudioPage AudioPageModel
 
 
@@ -19,3 +22,5 @@ type alias AudioPageModel =
 type PlayerState = Idle 
                 | Play 
                 | Stop
+
+type Mood = Good | Neutral | Sad | None

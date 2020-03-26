@@ -10,5 +10,8 @@ type Msg = Tick Time.Posix
          | ToStep1
          | ToStep2
          | ToStep3
+         | ToThanks
+         | ToQuestionary
          | ToTerms
+         | ToCredits
          | ToAudioPage 

@@ -39,6 +39,7 @@
 	var audio = new Audio('audio.mp3');
 	app.ports.playNotification.subscribe(function(data) {
 		if (data) { 
+			audio.preload = "none"
 			audio.play();
 		} else {
 			audio.pause();

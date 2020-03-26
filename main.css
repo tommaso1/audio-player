@@ -96,6 +96,9 @@ html,body{
     background-color:#EAFDFD;
   }
 
+  .img-container {
+    min-height: 200pt;
+  }
 
   .input {
     background: transparent;

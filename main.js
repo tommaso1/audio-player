@@ -5610,10 +5610,15 @@ var $author$project$Main$subscriptions = function (model) {
 	return A2($elm$time$Time$every, 1000, $author$project$Msg$Tick);
 };
 var $author$project$Model$AudioPage = function (a) {
-	return {$: 6, a: a};
+	return {$: 9, a: a};
 };
+var $author$project$Model$Credits = {$: 7};
 var $author$project$Model$Idle = 0;
+var $author$project$Model$None = 3;
 var $author$project$Model$Play = 1;
+var $author$project$Model$Questionary = function (a) {
+	return {$: 8, a: a};
+};
 var $author$project$Model$SplashPage = function (a) {
 	return {$: 0, a: a};
 };
@@ -5622,12 +5627,13 @@ var $author$project$Model$Step2 = {$: 3};
 var $author$project$Model$Step3 = {$: 4};
 var $author$project$Model$Stop = 2;
 var $author$project$Model$Terms = {$: 5};
+var $author$project$Model$Thanks = {$: 6};
 var $elm$json$Json$Encode$bool = _Json_wrap;
 var $author$project$Main$playNotification = _Platform_outgoingPort('playNotification', $elm$json$Json$Encode$bool);
 var $author$project$Main$update = F2(
 	function (msg, model) {
 		switch (model.$) {
-			case 6:
+			case 9:
 				var m = model.a;
 				var _v1 = _Utils_Tuple2(msg, m.G);
 				switch (_v1.a.$) {
@@ -5685,9 +5691,17 @@ var $author$project$Main$update = F2(
 						return _Utils_Tuple2($author$project$Model$Step2, $elm$core$Platform$Cmd$none);
 					case 6:
 						return _Utils_Tuple2($author$project$Model$Step3, $elm$core$Platform$Cmd$none);
-					case 7:
+					case 9:
 						return _Utils_Tuple2($author$project$Model$Terms, $elm$core$Platform$Cmd$none);
+					case 7:
+						return _Utils_Tuple2($author$project$Model$Thanks, $elm$core$Platform$Cmd$none);
 					case 8:
+						return _Utils_Tuple2(
+							$author$project$Model$Questionary(3),
+							$elm$core$Platform$Cmd$none);
+					case 10:
+						return _Utils_Tuple2($author$project$Model$Credits, $elm$core$Platform$Cmd$none);
+					case 11:
 						return _Utils_Tuple2(
 							$author$project$Model$AudioPage(
 								{G: 0, af: 0}),
@@ -5866,8 +5880,11 @@ var $author$project$AudioPage$viewAudioPage = function (model) {
 					]))
 			]));
 };
+var $author$project$Credits$viewCredits = function (_v0) {
+	return $elm$html$Html$text('credits');
+};
 var $author$project$Msg$ToStep1 = {$: 4};
-var $author$project$Msg$ToTerms = {$: 7};
+var $author$project$Msg$ToTerms = {$: 9};
 var $elm$html$Html$img = _VirtualDom_node('img');
 var $elm$html$Html$Attributes$src = function (url) {
 	return A2(
@@ -5930,12 +5947,21 @@ var $author$project$Intro$viewIntro = function (_v0) {
 							]))
 					])),
 				A2(
-				$elm$html$Html$img,
+				$elm$html$Html$div,
 				_List_fromArray(
 					[
-						$elm$html$Html$Attributes$src('Illustration_welcome.svg')
+						$elm$html$Html$Attributes$class('img-container')
 					]),
-				_List_Nil),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$img,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$src('Illustration_welcome.svg')
+							]),
+						_List_Nil)
+					])),
 				A2(
 				$elm$html$Html$div,
 				_List_fromArray(
@@ -6074,7 +6100,7 @@ var $author$project$Step2$viewStep2 = function (model) {
 					]))
 			]));
 };
-var $author$project$Msg$ToAudioPage = {$: 8};
+var $author$project$Msg$ToAudioPage = {$: 11};
 var $author$project$Step3$viewStep3 = function (model) {
 	return A2(
 		$elm$html$Html$div,
@@ -6181,9 +6207,59 @@ var $author$project$Terms$viewTerms = function (_v0) {
 					]))
 			]));
 };
+var $author$project$Msg$ToCredits = {$: 10};
+var $author$project$Thanks$viewThanks = function (model) {
+	return A2(
+		$elm$html$Html$div,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$class('column-space-between')
+			]),
+		_List_fromArray(
+			[
+				A2(
+				$elm$html$Html$h2,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('tutorial_item margin-top-2')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Mindfulness')
+					])),
+				A2(
+				$elm$html$Html$h2,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('tutorial_item margin-top-2')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Grazie!')
+					])),
+				A2(
+				$elm$html$Html$img,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$src('Illustration_thanks.svg')
+					]),
+				_List_Nil),
+				A2(
+				$elm$html$Html$button,
+				_List_fromArray(
+					[
+						$elm$html$Html$Events$onClick($author$project$Msg$ToCredits),
+						$elm$html$Html$Attributes$class('input_flat margin-bottom-4')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Credits')
+					]))
+			]));
+};
 var $author$project$Main$view = function (model) {
 	switch (model.$) {
-		case 6:
+		case 9:
 			var p = model.a;
 			return $author$project$AudioPage$viewAudioPage(p);
 		case 0:
@@ -6196,8 +6272,14 @@ var $author$project$Main$view = function (model) {
 			return $author$project$Step2$viewStep2(0);
 		case 4:
 			return $author$project$Step3$viewStep3(0);
-		default:
+		case 5:
 			return $author$project$Terms$viewTerms(0);
+		case 6:
+			return $author$project$Thanks$viewThanks(0);
+		case 7:
+			return $author$project$Credits$viewCredits(0);
+		default:
+			return $author$project$Credits$viewCredits(0);
 	}
 };
 var $author$project$Main$main = $elm$browser$Browser$element(
