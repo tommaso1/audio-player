@@ -6725,11 +6725,6 @@ var $author$project$AudioPage$viewAudioPage = function (model) {
 					]))
 			]));
 };
-var $author$project$Credits$viewCredits = function (_v0) {
-	return $elm$html$Html$text('credits');
-};
-var $author$project$Msg$ToStep1 = {$: 4};
-var $author$project$Msg$ToTerms = {$: 9};
 var $elm$html$Html$img = _VirtualDom_node('img');
 var $elm$html$Html$Attributes$src = function (url) {
 	return A2(
@@ -6737,6 +6732,157 @@ var $elm$html$Html$Attributes$src = function (url) {
 		'src',
 		_VirtualDom_noJavaScriptOrHtmlUri(url));
 };
+var $author$project$Credits$viewCredits = function (_v0) {
+	return A2(
+		$elm$html$Html$div,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$class('column-credits')
+			]),
+		_List_fromArray(
+			[
+				A2(
+				$elm$html$Html$h2,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('margin-top margin-bottom-4')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Credits')
+					])),
+				A2(
+				$elm$html$Html$p,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('bold')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Invented and Approved by')
+					])),
+				A2(
+				$elm$html$Html$p,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('margin-bottom-4')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Donato Simone Frigotto')
+					])),
+				A2(
+				$elm$html$Html$p,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('bold margin-bottom-4')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Designed and Realized by')
+					])),
+				A2(
+				$elm$html$Html$img,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$src('uqido.png'),
+						$elm$html$Html$Attributes$class('uqido-logo')
+					]),
+				_List_Nil),
+				A2(
+				$elm$html$Html$p,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('bold margin-top-4')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Special Thanks to')
+					])),
+				A2(
+				$elm$html$Html$p,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('credit-item')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Fausto Panizzolo')
+					])),
+				A2(
+				$elm$html$Html$p,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('credit-item')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Pier Mattia Avesani')
+					])),
+				A2(
+				$elm$html$Html$p,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('credit-item')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Anna Germin')
+					])),
+				A2(
+				$elm$html$Html$p,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('credit-item')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Giulia Mastrella')
+					])),
+				A2(
+				$elm$html$Html$p,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('credit-item')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Tommaso Rosso')
+					])),
+				A2(
+				$elm$html$Html$p,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('credit-item')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Camilla Stevani')
+					])),
+				A2(
+				$elm$html$Html$p,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('bold margin-top-4')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Illustrations by')
+					])),
+				A2(
+				$elm$html$Html$p,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('credit-item')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('freepik')
+					]))
+			]));
+};
+var $author$project$Msg$ToStep1 = {$: 4};
+var $author$project$Msg$ToTerms = {$: 9};
 var $author$project$Intro$viewIntro = function (_v0) {
 	return A2(
 		$elm$html$Html$div,
