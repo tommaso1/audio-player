@@ -16,6 +16,7 @@ import Step3 exposing (..)
 import Thanks exposing (..)
 import Credits exposing (..)
 import Questionary exposing (..)
+import Http
 
 port playNotification : Bool -> Cmd msg
 
@@ -36,7 +37,7 @@ main =
 
 init : () -> (PageState, Cmd Msg)
 init _ =
-  ( Intro
+  ( SplashPage 0
   , Cmd.none
   )
 
@@ -45,7 +46,9 @@ init _ =
 update : Msg -> PageState -> (PageState, Cmd Msg)
 update msg model = case model of
     AudioPage m -> case (msg, m.playerState) of
-          (Tick _, Play) -> (AudioPage { m | seconds = m.seconds + 1 }, Cmd.none)
+          (Tick _, Play) -> case m.seconds of
+             1260 -> (Questionary None, playNotification False)
+             _ -> (AudioPage { m | seconds = m.seconds + 1 }, Cmd.none)
           (Tick _, _) -> (model , Cmd.none)
           (PlayAudio, _) -> (AudioPage { m | playerState = Play }, playNotification True)
           (PauseAudio, _) -> (AudioPage { m | playerState = Stop }, playNotification False)
@@ -64,6 +67,9 @@ update msg model = case model of
       ToQuestionary -> (Questionary None, Cmd.none)
       ToCredits -> (Credits, Cmd.none)
       ToAudioPage  -> (AudioPage { seconds = 0, playerState = Idle}, Cmd.none)
+      Happy -> (Thanks, Http.get { url="http://bho.com?result=" ++ "happy", expect = Http.expectString GotText})
+      Normal -> (Thanks, Http.get { url="http://bho.com?result=" ++ "normal", expect = Http.expectString GotText})
+      Msg.Sad -> (Thanks, Http.get { url="http://bho.com?result=" ++ "sad", expect = Http.expectString GotText})
       _ -> (model, Cmd.none)
 
 
@@ -89,8 +95,7 @@ view model = case model of
   Terms -> viewTerms()
   Thanks -> viewThanks()
   Credits -> viewCredits()
-  _ -> viewCredits()
-  -- Questionary s -> viewQuestionary s
+  Questionary s -> viewQuesitonary s
 
 
 

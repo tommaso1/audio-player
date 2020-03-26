@@ -1,5 +1,6 @@
 module Msg exposing(Msg(..))
 import Time
+import Http exposing (..)
 
 -- UPDATE
 
@@ -15,3 +16,8 @@ type Msg = Tick Time.Posix
          | ToTerms
          | ToCredits
          | ToAudioPage 
+         | Happy
+         | Sad
+         | Normal
+         | GotText (Result Http.Error String)
+
