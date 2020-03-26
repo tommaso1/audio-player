@@ -37,7 +37,7 @@ main =
 
 init : () -> (PageState, Cmd Msg)
 init _ =
-  ( SplashPage 0
+  ( Intro
   , Cmd.none
   )
 
@@ -52,6 +52,7 @@ update msg model = case model of
           (Tick _, _) -> (model , Cmd.none)
           (PlayAudio, _) -> (AudioPage { m | playerState = Play }, playNotification True)
           (PauseAudio, _) -> (AudioPage { m | playerState = Stop }, playNotification False)
+          (ToThanks, _) -> (Thanks, playNotification False)
           (_, _) -> (model, Cmd.none)
     SplashPage 2 -> (Intro, Cmd.none)
     SplashPage p -> case msg of 
@@ -63,7 +64,7 @@ update msg model = case model of
       ToStep2 -> (Step2, Cmd.none)
       ToStep3 -> (Step3, Cmd.none)
       ToTerms -> (Terms, Cmd.none)
-      ToThanks -> (Thanks, Cmd.none)
+      ToThanks -> (Thanks, playNotification False)
       ToQuestionary -> (Questionary None, Cmd.none)
       ToCredits -> (Credits, Cmd.none)
       ToAudioPage  -> (AudioPage { seconds = 0, playerState = Idle}, Cmd.none)

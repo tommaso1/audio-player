@@ -32,12 +32,15 @@ viewAudioPage model =
         Idle -> PlayAudio
         Play -> PauseAudio
         Stop -> PlayAudio)
-      , class "input margin-bottom-4"] [
+      , class "input margin-bottom-2"] [
         text (case model.playerState of 
           Idle -> "Play"
           Play -> "Pause"
           Stop -> "Play"
         )
+      ]
+    , button [ onClick ToThanks, class "input_flat margin-bottom-4"] [
+        text "Credits"
       ]
   ]
   

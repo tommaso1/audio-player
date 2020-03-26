@@ -5359,15 +5359,11 @@ var $elm$core$Task$perform = F2(
 			A2($elm$core$Task$map, toMessage, task));
 	});
 var $elm$browser$Browser$element = _Browser_element;
-var $author$project$Model$SplashPage = function (a) {
-	return {$: 0, a: a};
-};
+var $author$project$Model$Intro = {$: 1};
 var $elm$core$Platform$Cmd$batch = _Platform_batch;
 var $elm$core$Platform$Cmd$none = $elm$core$Platform$Cmd$batch(_List_Nil);
 var $author$project$Main$init = function (_v0) {
-	return _Utils_Tuple2(
-		$author$project$Model$SplashPage(0),
-		$elm$core$Platform$Cmd$none);
+	return _Utils_Tuple2($author$project$Model$Intro, $elm$core$Platform$Cmd$none);
 };
 var $author$project$Msg$Tick = function (a) {
 	return {$: 0, a: a};
@@ -5796,11 +5792,13 @@ var $author$project$Msg$GotText = function (a) {
 	return {$: 15, a: a};
 };
 var $author$project$Model$Idle = 0;
-var $author$project$Model$Intro = {$: 1};
 var $author$project$Model$None = 3;
 var $author$project$Model$Play = 1;
 var $author$project$Model$Questionary = function (a) {
 	return {$: 8, a: a};
+};
+var $author$project$Model$SplashPage = function (a) {
+	return {$: 0, a: a};
 };
 var $author$project$Model$Step1 = {$: 2};
 var $author$project$Model$Step2 = {$: 3};
@@ -6486,6 +6484,11 @@ var $author$project$Main$update = F2(
 									m,
 									{H: 2})),
 							$author$project$Main$playNotification(false));
+					case 7:
+						var _v6 = _v1.a;
+						return _Utils_Tuple2(
+							$author$project$Model$Thanks,
+							$author$project$Main$playNotification(false));
 					default:
 						return _Utils_Tuple2(model, $elm$core$Platform$Cmd$none);
 				}
@@ -6515,7 +6518,9 @@ var $author$project$Main$update = F2(
 					case 9:
 						return _Utils_Tuple2($author$project$Model$Terms, $elm$core$Platform$Cmd$none);
 					case 7:
-						return _Utils_Tuple2($author$project$Model$Thanks, $elm$core$Platform$Cmd$none);
+						return _Utils_Tuple2(
+							$author$project$Model$Thanks,
+							$author$project$Main$playNotification(false));
 					case 8:
 						return _Utils_Tuple2(
 							$author$project$Model$Questionary(3),
@@ -6558,6 +6563,7 @@ var $author$project$Main$update = F2(
 	});
 var $author$project$Msg$PauseAudio = {$: 2};
 var $author$project$Msg$PlayAudio = {$: 1};
+var $author$project$Msg$ToThanks = {$: 7};
 var $elm$html$Html$button = _VirtualDom_node('button');
 var $elm$json$Json$Encode$string = _Json_wrap;
 var $elm$html$Html$Attributes$stringProperty = F2(
@@ -6706,7 +6712,7 @@ var $author$project$AudioPage$viewAudioPage = function (model) {
 									return $author$project$Msg$PlayAudio;
 							}
 						}()),
-						$elm$html$Html$Attributes$class('input margin-bottom-4')
+						$elm$html$Html$Attributes$class('input margin-bottom-2')
 					]),
 				_List_fromArray(
 					[
@@ -6722,6 +6728,17 @@ var $author$project$AudioPage$viewAudioPage = function (model) {
 									return 'Play';
 							}
 						}())
+					])),
+				A2(
+				$elm$html$Html$button,
+				_List_fromArray(
+					[
+						$elm$html$Html$Events$onClick($author$project$Msg$ToThanks),
+						$elm$html$Html$Attributes$class('input_flat margin-bottom-4')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Credits')
 					]))
 			]));
 };
@@ -6888,7 +6905,7 @@ var $author$project$Intro$viewIntro = function (_v0) {
 		$elm$html$Html$div,
 		_List_fromArray(
 			[
-				$elm$html$Html$Attributes$class('column-space-between')
+				$elm$html$Html$Attributes$class('column-intro')
 			]),
 		_List_fromArray(
 			[
@@ -6989,14 +7006,7 @@ var $author$project$Intro$viewIntro = function (_v0) {
 var $author$project$Msg$Happy = {$: 12};
 var $author$project$Msg$Normal = {$: 14};
 var $author$project$Msg$Sad = {$: 13};
-var $elm$html$Html$a = _VirtualDom_node('a');
 var $elm$html$Html$br = _VirtualDom_node('br');
-var $elm$html$Html$Attributes$href = function (url) {
-	return A2(
-		$elm$html$Html$Attributes$stringProperty,
-		'href',
-		_VirtualDom_noJavaScriptUri(url));
-};
 var $author$project$Questionary$viewQuesitonary = function (m) {
 	return A2(
 		$elm$html$Html$div,
@@ -7093,17 +7103,6 @@ var $author$project$Questionary$viewQuesitonary = function (m) {
 									]),
 								_List_Nil)
 							]))
-					])),
-				A2(
-				$elm$html$Html$a,
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$class('input_flat'),
-						$elm$html$Html$Attributes$href('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
-					]),
-				_List_fromArray(
-					[
-						$elm$html$Html$text('Compila il quesitonario')
 					]))
 			]));
 };

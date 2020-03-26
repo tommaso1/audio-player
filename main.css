@@ -36,6 +36,18 @@ html,body{
     justify-content: space-between;
   }
 
+
+  .column-intro {
+    width:100%;
+    margin: 0 auto;
+    max-width: 400px;
+    font-size: 0.95rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .app_bar {
     padding: 0 1rem;
     margin-top: 3rem;
