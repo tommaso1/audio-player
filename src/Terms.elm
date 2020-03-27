@@ -19,4 +19,6 @@ Per questo devono essere usate in un luogo protetto e tranquillo, certamente non
 Se hai compreso e accetti queste avvertenze, allora siamo pronti ad iniziare.""" ]
   ] 
     , button [ onClick ToStep1, class "input_primary" ] [ text "Iniziamo" ]
+    , br [] []
+    , br [] []
   ]

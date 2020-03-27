@@ -6543,7 +6543,7 @@ var $author$project$Main$update = F2(
 							$elm$http$Http$get(
 								{
 									E: $elm$http$Http$expectString($author$project$Msg$GotText),
-									M: 'http://bho.com?result=' + 'happy'
+									M: 'https://us-central1-profondamente-467dc.cloudfunctions.net/saveMood?mood=' + 'happy'
 								}));
 					case 14:
 						return _Utils_Tuple2(
@@ -6551,7 +6551,7 @@ var $author$project$Main$update = F2(
 							$elm$http$Http$get(
 								{
 									E: $elm$http$Http$expectString($author$project$Msg$GotText),
-									M: 'http://bho.com?result=' + 'normal'
+									M: 'https://us-central1-profondamente-467dc.cloudfunctions.net/saveMood?mood=' + 'normal'
 								}));
 					case 13:
 						return _Utils_Tuple2(
@@ -6559,7 +6559,7 @@ var $author$project$Main$update = F2(
 							$elm$http$Http$get(
 								{
 									E: $elm$http$Http$expectString($author$project$Msg$GotText),
-									M: 'http://bho.com?result=' + 'sad'
+									M: 'https://us-central1-profondamente-467dc.cloudfunctions.net/saveMood?mood=' + 'sad'
 								}));
 					default:
 						return _Utils_Tuple2(model, $elm$core$Platform$Cmd$none);
@@ -6775,27 +6775,48 @@ var $author$project$Credits$viewCredits = function (_v0) {
 						$elm$html$Html$text('Credits')
 					])),
 				A2(
-				$elm$html$Html$p,
+				$elm$html$Html$h3,
 				_List_fromArray(
 					[
 						$elm$html$Html$Attributes$class('bold')
 					]),
 				_List_fromArray(
 					[
-						$elm$html$Html$text('Invented and Approved by')
+						$elm$html$Html$text('Invented by')
 					])),
 				A2(
 				$elm$html$Html$p,
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$class('margin-bottom-4')
-					]),
+				_List_Nil,
 				_List_fromArray(
 					[
 						$elm$html$Html$text('Donato Simone Frigotto')
 					])),
 				A2(
 				$elm$html$Html$p,
+				_List_Nil,
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Fausto Panizzolo')
+					])),
+				A2(
+				$elm$html$Html$h3,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('bold')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Scientific Content')
+					])),
+				A2(
+				$elm$html$Html$p,
+				_List_Nil,
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Donato Simone Frigotto')
+					])),
+				A2(
+				$elm$html$Html$h3,
 				_List_fromArray(
 					[
 						$elm$html$Html$Attributes$class('bold margin-bottom-4')
@@ -6824,14 +6845,9 @@ var $author$project$Credits$viewCredits = function (_v0) {
 					])),
 				A2(
 				$elm$html$Html$p,
+				_List_Nil,
 				_List_fromArray(
 					[
-						$elm$html$Html$Attributes$class('')
-					]),
-				_List_fromArray(
-					[
-						$elm$html$Html$text('Fausto Panizzolo'),
-						A2($elm$html$Html$br, _List_Nil, _List_Nil),
 						$elm$html$Html$text('Pier Mattia Avesani'),
 						A2($elm$html$Html$br, _List_Nil, _List_Nil),
 						$elm$html$Html$text('Anna Germin'),
@@ -7313,7 +7329,9 @@ var $author$project$Terms$viewTerms = function (_v0) {
 				_List_fromArray(
 					[
 						$elm$html$Html$text('Iniziamo')
-					]))
+					])),
+				A2($elm$html$Html$br, _List_Nil, _List_Nil),
+				A2($elm$html$Html$br, _List_Nil, _List_Nil)
 			]));
 };
 var $author$project$Msg$ToCredits = {$: 10};
@@ -7330,7 +7348,7 @@ var $author$project$Thanks$viewThanks = function (model) {
 				$elm$html$Html$h2,
 				_List_fromArray(
 					[
-						$elm$html$Html$Attributes$class('margin-top margin-bottom-4')
+						$elm$html$Html$Attributes$class('margin-top margin-bottom-2')
 					]),
 				_List_fromArray(
 					[

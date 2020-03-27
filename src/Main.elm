@@ -69,9 +69,9 @@ update msg model = case model of
       ToQuestionary -> (Questionary None, Cmd.none)
       ToCredits -> (Credits, Cmd.none)
       ToAudioPage  -> (AudioPage { seconds = 0, playerState = Idle}, Cmd.none)
-      Happy -> (Thanks, Http.get { url="http://bho.com?result=" ++ "happy", expect = Http.expectString GotText})
-      Normal -> (Thanks, Http.get { url="http://bho.com?result=" ++ "normal", expect = Http.expectString GotText})
-      Msg.Sad -> (Thanks, Http.get { url="http://bho.com?result=" ++ "sad", expect = Http.expectString GotText})
+      Happy -> (Thanks, Http.get { url="https://us-central1-profondamente-467dc.cloudfunctions.net/saveMood?mood=" ++ "happy", expect = Http.expectString GotText })
+      Normal -> (Thanks, Http.get { url="https://us-central1-profondamente-467dc.cloudfunctions.net/saveMood?mood=" ++ "normal", expect = Http.expectString GotText })
+      Msg.Sad -> (Thanks, Http.get { url="https://us-central1-profondamente-467dc.cloudfunctions.net/saveMood?mood=" ++ "sad", expect = Http.expectString GotText })
       _ -> (model, Cmd.none)
 
 
