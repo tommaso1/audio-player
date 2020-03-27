@@ -6936,7 +6936,7 @@ var $author$project$Intro$viewIntro = function (_v0) {
 							]),
 						_List_fromArray(
 							[
-								$elm$html$Html$text('Questa app si basa sulla mindfulness che è un metodo validato che permette di passare da uno stato di tensione e stanchezza a una percezione soggettiva di benessere, grazie alla conoscenza profonda degli stati mentali.')
+								$elm$html$Html$text('Questa app si basa su un metodo validato che permette di passare da uno stato di tensione e stanchezza a una percezione soggettiva di benessere, grazie alla conoscenza profonda degli stati mentali.')
 							]))
 					])),
 				A2(
