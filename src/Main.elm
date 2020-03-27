@@ -37,7 +37,7 @@ main =
 
 init : () -> (PageState, Cmd Msg)
 init _ =
-  ( Intro
+  ( SplashPage 0
   , Cmd.none
   )
 
@@ -102,7 +102,7 @@ view model = case model of
 
 
 viewSplash : () -> Html Msg
-viewSplash () =  button [ onClick ToIntro, class "input"] [
-        text "Splash page"
-      ]
+viewSplash () =  div [class "splash"] [
+    h2 [ class "title" ]  [ text "Profondamente" ]
+  ]
 

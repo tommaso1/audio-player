@@ -5359,11 +5359,15 @@ var $elm$core$Task$perform = F2(
 			A2($elm$core$Task$map, toMessage, task));
 	});
 var $elm$browser$Browser$element = _Browser_element;
-var $author$project$Model$Intro = {$: 1};
+var $author$project$Model$SplashPage = function (a) {
+	return {$: 0, a: a};
+};
 var $elm$core$Platform$Cmd$batch = _Platform_batch;
 var $elm$core$Platform$Cmd$none = $elm$core$Platform$Cmd$batch(_List_Nil);
 var $author$project$Main$init = function (_v0) {
-	return _Utils_Tuple2($author$project$Model$Intro, $elm$core$Platform$Cmd$none);
+	return _Utils_Tuple2(
+		$author$project$Model$SplashPage(0),
+		$elm$core$Platform$Cmd$none);
 };
 var $author$project$Msg$Tick = function (a) {
 	return {$: 0, a: a};
@@ -5792,13 +5796,11 @@ var $author$project$Msg$GotText = function (a) {
 	return {$: 15, a: a};
 };
 var $author$project$Model$Idle = 0;
+var $author$project$Model$Intro = {$: 1};
 var $author$project$Model$None = 3;
 var $author$project$Model$Play = 1;
 var $author$project$Model$Questionary = function (a) {
 	return {$: 8, a: a};
-};
-var $author$project$Model$SplashPage = function (a) {
-	return {$: 0, a: a};
 };
 var $author$project$Model$Step1 = {$: 2};
 var $author$project$Model$Step2 = {$: 3};
@@ -6786,16 +6788,14 @@ var $author$project$Credits$viewCredits = function (_v0) {
 					])),
 				A2(
 				$elm$html$Html$p,
-				_List_Nil,
 				_List_fromArray(
 					[
-						$elm$html$Html$text('Donato Simone Frigotto')
-					])),
-				A2(
-				$elm$html$Html$p,
-				_List_Nil,
+						$elm$html$Html$Attributes$class('credit-item')
+					]),
 				_List_fromArray(
 					[
+						$elm$html$Html$text('Donato Simone Frigotto'),
+						A2($elm$html$Html$br, _List_Nil, _List_Nil),
 						$elm$html$Html$text('Fausto Panizzolo')
 					])),
 				A2(
@@ -6845,7 +6845,10 @@ var $author$project$Credits$viewCredits = function (_v0) {
 					])),
 				A2(
 				$elm$html$Html$p,
-				_List_Nil,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('credit-item')
+					]),
 				_List_fromArray(
 					[
 						$elm$html$Html$text('Pier Mattia Avesani'),
@@ -7094,18 +7097,25 @@ var $author$project$Questionary$viewQuesitonary = function (model) {
 					]))
 			]));
 };
-var $author$project$Msg$ToIntro = {$: 3};
 var $author$project$Main$viewSplash = function (_v0) {
 	return A2(
-		$elm$html$Html$button,
+		$elm$html$Html$div,
 		_List_fromArray(
 			[
-				$elm$html$Html$Events$onClick($author$project$Msg$ToIntro),
-				$elm$html$Html$Attributes$class('input')
+				$elm$html$Html$Attributes$class('splash')
 			]),
 		_List_fromArray(
 			[
-				$elm$html$Html$text('Splash page')
+				A2(
+				$elm$html$Html$h2,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('title')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Profondamente')
+					]))
 			]));
 };
 var $author$project$Msg$ToStep2 = {$: 5};
