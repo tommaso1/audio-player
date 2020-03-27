@@ -18,5 +18,5 @@ viewStep3 model =  div [ class "column-space-between" ] [
         , br [][]
         , text "o steso" 
     ]
-    , div[ class "img-container"] [ img [ src "Illustration_posture.svg" ] [] ]
+    , div[ class "img-container"] [ img [ src "Illustration_sit.svg" ] [] ]
     , button [ onClick ToAudioPage, class "input_flat margin-bottom-4"] [ text "Iniziamo" ]]

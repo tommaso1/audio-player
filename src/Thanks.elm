@@ -9,8 +9,8 @@ import Html.Events exposing (onClick)
 
 viewThanks : () -> Html Msg
 viewThanks model =  div [ class "column-space-between" ] [ 
-    h2 [ class "tutorial_item margin-top-2" ] [ 
-        text "Mindfulness" ]
+    h2 [ class "margin-top margin-bottom-4" ] [ 
+        text "Profondamente" ]
     , h2 [ class "tutorial_item margin-top-2" ] [
         text "Grazie!"
     ]

@@ -6638,7 +6638,7 @@ var $author$project$AudioPage$viewAudioPage = function (model) {
 					]),
 				_List_fromArray(
 					[
-						$elm$html$Html$text('Mindfulness')
+						$elm$html$Html$text('Profondamente')
 					])),
 				A2(
 				$elm$html$Html$div,
@@ -6653,7 +6653,7 @@ var $author$project$AudioPage$viewAudioPage = function (model) {
 						_List_Nil,
 						_List_fromArray(
 							[
-								$elm$html$Html$text('Nome Sessione 1')
+								$elm$html$Html$text('Rilassamento e Rigenerazione')
 							])),
 						A2(
 						$elm$html$Html$p,
@@ -6871,7 +6871,7 @@ var $author$project$Intro$viewIntro = function (_v0) {
 		$elm$html$Html$div,
 		_List_fromArray(
 			[
-				$elm$html$Html$Attributes$class('column-intro')
+				$elm$html$Html$Attributes$class('column-space-between')
 			]),
 		_List_fromArray(
 			[
@@ -6896,7 +6896,7 @@ var $author$project$Intro$viewIntro = function (_v0) {
 								_List_Nil,
 								_List_fromArray(
 									[
-										$elm$html$Html$text('Benvenuto su Mindfulness')
+										$elm$html$Html$text('Benvenuto su Profondamente')
 									]))
 							])),
 						A2(
@@ -6907,7 +6907,7 @@ var $author$project$Intro$viewIntro = function (_v0) {
 							]),
 						_List_fromArray(
 							[
-								$elm$html$Html$text('Sei uno dei nostri eroi. Grazie per quello che fai. Prenditi una pausa e dedica un po\' di tempo a te stesso. Ti consigliamo di utilizzare Mindfulness una volta concluso il tuo turno di lavoro o a casa per rigenerarti.')
+								$elm$html$Html$text('Sei uno dei nostri eroi. Grazie per quello che fai. Prenditi una pausa e dedica un po\' di tempo a te stesso. Ti consigliamo di utilizzare Profondamente una volta concluso il tuo turno di lavoro o a casa per rigenerarti.')
 							])),
 						A2(
 						$elm$html$Html$p,
@@ -6917,7 +6917,7 @@ var $author$project$Intro$viewIntro = function (_v0) {
 							]),
 						_List_fromArray(
 							[
-								$elm$html$Html$text('La mindfulness è un metodo validato che permette di passare da uno stato di sofferenza a una percezione soggettiva di benessere, grazie alla conoscenza profonda degli stati mentali.')
+								$elm$html$Html$text('Questa app si basa sulla mindfulness che è un metodo validato che permette di passare da uno stato di tensione e stanchezza a una percezione soggettiva di benessere, grazie alla conoscenza profonda degli stati mentali.')
 							]))
 					])),
 				A2(
@@ -6972,13 +6972,12 @@ var $author$project$Intro$viewIntro = function (_v0) {
 var $author$project$Msg$Happy = {$: 12};
 var $author$project$Msg$Normal = {$: 14};
 var $author$project$Msg$Sad = {$: 13};
-var $elm$html$Html$a = _VirtualDom_node('a');
-var $author$project$Questionary$viewQuesitonary = function (m) {
+var $author$project$Questionary$viewQuesitonary = function (model) {
 	return A2(
 		$elm$html$Html$div,
 		_List_fromArray(
 			[
-				$elm$html$Html$Attributes$class('column-space-between')
+				$elm$html$Html$Attributes$class('column-intro')
 			]),
 		_List_fromArray(
 			[
@@ -6990,7 +6989,7 @@ var $author$project$Questionary$viewQuesitonary = function (m) {
 					]),
 				_List_fromArray(
 					[
-						$elm$html$Html$text('Mindfulness')
+						$elm$html$Html$text('Profondamente')
 					])),
 				A2(
 				$elm$html$Html$div,
@@ -7001,14 +7000,21 @@ var $author$project$Questionary$viewQuesitonary = function (m) {
 				_List_fromArray(
 					[
 						A2(
-						$elm$html$Html$h3,
+						$elm$html$Html$p,
 						_List_Nil,
 						_List_fromArray(
 							[
-								$elm$html$Html$text('La sessione è finita.'),
-								A2($elm$html$Html$br, _List_Nil, _List_Nil),
-								$elm$html$Html$text('Come ti senti?')
-							]))
+								$elm$html$Html$text('La sessione è finita.')
+							])),
+						A2(
+						$elm$html$Html$p,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Come valuti questa esperienza?')
+							])),
+						A2($elm$html$Html$br, _List_Nil, _List_Nil),
+						A2($elm$html$Html$br, _List_Nil, _List_Nil)
 					])),
 				A2(
 				$elm$html$Html$div,
@@ -7069,16 +7075,6 @@ var $author$project$Questionary$viewQuesitonary = function (m) {
 									]),
 								_List_Nil)
 							]))
-					])),
-				A2(
-				$elm$html$Html$a,
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$class('input_flat')
-					]),
-				_List_fromArray(
-					[
-						$elm$html$Html$text('Compila il quesitonario')
 					]))
 			]));
 };
@@ -7242,7 +7238,7 @@ var $author$project$Step3$viewStep3 = function (model) {
 						$elm$html$Html$img,
 						_List_fromArray(
 							[
-								$elm$html$Html$Attributes$src('Illustration_posture.svg')
+								$elm$html$Html$Attributes$src('Illustration_sit.svg')
 							]),
 						_List_Nil)
 					])),
@@ -7334,11 +7330,11 @@ var $author$project$Thanks$viewThanks = function (model) {
 				$elm$html$Html$h2,
 				_List_fromArray(
 					[
-						$elm$html$Html$Attributes$class('tutorial_item margin-top-2')
+						$elm$html$Html$Attributes$class('margin-top margin-bottom-4')
 					]),
 				_List_fromArray(
 					[
-						$elm$html$Html$text('Mindfulness')
+						$elm$html$Html$text('Profondamente')
 					])),
 				A2(
 				$elm$html$Html$h2,

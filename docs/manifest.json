@@ -1,9 +1,9 @@
 {
-  "name": "Audio player",
-  "short_name": "Mindfulness",
+  "name": "Profondamente",
+  "short_name": "Profondamente",
   "description": "Relaxing mindfulness",
-  "lang": "en",
-  "start_url": "/audio-player/",
+  "lang": "it",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#333333",
   "icons": [

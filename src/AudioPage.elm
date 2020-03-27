@@ -15,9 +15,9 @@ viewAudioPage model =
     minutes = formatSeconds(model.seconds // 60)
   in
   div [ class "column-space-between" ] [
-    h2 [ class "margin-top margin-bottom-4" ] [ text "Mindfulness" ]
+    h2 [ class "margin-top margin-bottom-4" ] [ text "Profondamente" ]
     , div [ class "column" ] [
-      h3 [ ] [ text "Nome Sessione 1" ]
+      h3 [ ] [ text "Rilassamento e Rigenerazione" ]
       , p [ class "margin-top-2" ] [ text "Durata sessione: 20 minuti" ]
     ]
     , div [ class "container" ] [

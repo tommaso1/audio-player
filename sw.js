@@ -1,18 +1,18 @@
-var CACHE_NAME = 'cache-v5';
+var CACHE_NAME = 'cache-v6';
 var urlsToCache = [
-  '/audio-player/',
-  '/audio-player/main.css',
-  '/audio-player/main.js',
-  '/audio-player/audio.mp3',
-  '/audio-player/Illustration_posture.svg',
-  '/audio-player/Illustration_sound.svg',
-  '/audio-player/Illustration_thanks.svg',
-  '/audio-player/Illustration_time.svg',
-  '/audio-player/Illustration_welcome.svg',
-  '/audio-player/smile_happy.svg',
-  '/audio-player/smile_neutral.svg',
-  '/audio-player/smile_sad.svg',
-  '/audio-player/uqido.png',
+  '/',
+  '/main.css',
+  '/main.js',
+  '/audio.mp3',
+  '/Illustration_sit.svg',
+  '/Illustration_sound.svg',
+  '/Illustration_thanks.svg',
+  '/Illustration_time.svg',
+  '/Illustration_welcome.svg',
+  '/smile_happy.svg',
+  '/smile_neutral.svg',
+  '/smile_sad.svg',
+  '/uqido.png',
 ];
 
 self.addEventListener('install', function(event) {
@@ -54,12 +54,5 @@ self.addEventListener('fetch', function(event) {
       })
     );
   });
-  
-  
-  
-  
-  
-  
-  
   
   
